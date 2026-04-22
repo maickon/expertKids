@@ -1,0 +1,37 @@
+{
+  "name": "ExpertKids - Alfabetização e Matemática Online",
+  "short_name": "ExpertKids",
+  "description": "Plataforma educativa com exercícios infinitos de leitura, matemática e lógica para crianças.",
+  "start_url": "/app.html",
+  "display": "standalone",
+  "background_color": "#eff6ff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "img/192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "education",
+    "kids"
+  ],
+  "screenshots": [
+    {
+      "src": "img/512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpertKids | Alfabetização e Matemática Online para Crianças de 5 a 9 anos</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/icon.png">
+    
+    <!-- SEO Básico -->
+    <meta name="description" content="ExpertKids é a plataforma líder em reforço escolar dinâmico. Exercícios infinitos de leitura, matemática e lógica baseados em neurociência. Teste grátis hoje!">
+    <meta name="keywords" content="educação infantil, reforço escolar, alfabetização online, matemática para crianças, jogos educativos, PWA educativo">
+    <meta name="author" content="ExpertKids">
+    <link rel="canonical" href="https://expertkids.com.br/">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://expertkids.com.br/">
+    <meta property="og:title" content="ExpertKids | O Futuro do seu Filho Começa Aqui">
+    <meta property="og:description" content="Transforme o tempo de tela em aprendizado ativo com exercícios dinâmicos e seguros.">
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/3067/3067451.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://expertkids.com.br/">
+    <meta property="twitter:title" content="ExpertKids | Educação Divertida">
+    <meta property="twitter:description" content="Plataforma de exercícios dinâmicos para crianças de 5 a 9 anos.">
+    <meta property="twitter:image" content="https://cdn-icons-png.flaticon.com/512/3067/3067451.png">
+
+    <!-- Dados Estruturados (Google Rich Results) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ExpertKids",
+      "operatingSystem": "Web, Android, iOS",
+      "applicationCategory": "EducationApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "97.00",
+        "priceCurrency": "BRL"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "1024"
+      }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-kids { font-family: 'Fredoka', sans-serif; }
+        .bg-kids-pattern {
+            background-color: #ffffff;
+            background-image:  radial-gradient(#3b82f6 0.5px, transparent 0.5px), radial-gradient(#3b82f6 0.5px, #ffffff 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0,10px 10px;
+            opacity: 0.05;
+        }
+        .blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(147, 51, 234, 0.2) 100%);
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 overflow-x-hidden">
+
+    <div class="bg-kids-pattern fixed inset-0 pointer-events-none"></div>
+
+    <!-- Header -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-blue-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-kids font-bold text-blue-600 flex items-center gap-2">
+                <span class="text-3xl">🌟</span> ExpertKids
+            </div>
+            <div class="hidden md:flex gap-8 font-bold text-slate-600">
+                <a href="#como-funciona" class="hover:text-blue-600 transition-colors">Como funciona</a>
+                <a href="#ciencia" class="hover:text-blue-600 transition-colors">Ciência</a>
+                <a href="#faq" class="hover:text-blue-600 transition-colors">Dúvidas</a>
+            </div>
+            <a href="app.html" class="bg-blue-600 text-white px-8 py-3 rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200">
+                Acessar App
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative pt-32 pb-20 px-6 max-w-7xl mx-auto text-center md:text-left md:flex items-center gap-12">
+        <div class="blob -top-20 -left-20"></div>
+        <div class="md:w-1/2">
+            <span class="bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-6 inline-block">Educativo & Seguro</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 leading-[1.1] mb-6">
+                Seu filho merece <br/> <span class="text-blue-600">aprender brincando.</span>
+            </h1>
+            <p class="text-xl text-slate-600 mb-10 leading-relaxed">
+                O <strong>ExpertKids</strong> utiliza o método de repetição espaçada e lógica visual para acelerar a alfabetização e o raciocínio matemático em casa.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#planos" class="bg-blue-600 text-white px-10 py-5 rounded-3xl font-bold text-xl shadow-2xl shadow-blue-300 hover:scale-105 transition-all text-center">
+                    Garantir Acesso Agora
+                </a>
+                <a href="#trial" class="bg-white border-2 border-slate-200 text-slate-700 px-10 py-5 rounded-3xl font-bold text-xl hover:border-blue-300 transition-all text-center">
+                    Testar Grátis
+                </a>
+            </div>
+        </div>
+        <div class="md:w-1/2 mt-16 md:mt-0 relative">
+            <img src="https://images.unsplash.com/photo-1525829528215-ffae12a76ac8?auto=format&fit=crop&w=800&q=80" alt="Criança Feliz" class="rounded-[3rem] shadow-3xl rotate-3 border-8 border-white">
+            <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-3xl shadow-xl flex items-center gap-4 animate-bounce">
+                <span class="text-4xl">⭐</span>
+                <div>
+                    <p class="font-bold text-slate-900">+10.000</p>
+                    <p class="text-sm text-slate-500 italic">Alunos Felizes</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- O que é o sistema (Cards) -->
+    <section id="como-funciona" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">O que é o ExpertKids?</h2>
+            <p class="text-xl text-slate-500 max-w-2xl mx-auto">Mais que um jogo, uma ferramenta de desenvolvimento cognitivo completa para crianças de 5 a 9 anos.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border-b-8 border-blue-500 hover:-translate-y-2 transition-transform">
+                <div class="text-5xl mb-6">🧠</div>
+                <h3 class="text-2xl font-bold mb-4">Exercícios Infinitos</h3>
+                <p class="text-slate-600 leading-relaxed">Nosso motor exclusivo gera exercícios diferentes a cada clique. Seu filho nunca vai decorar respostas, ele vai <strong>aprender a lógica</strong>.</p>
+            </div>
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border-b-8 border-green-500 hover:-translate-y-2 transition-transform">
+                <div class="text-5xl mb-6">🛡️</div>
+                <h3 class="text-2xl font-bold mb-4">Ambiente Blindado</h3>
+                <p class="text-slate-600 leading-relaxed">Zero anúncios, zero vídeos aleatórios e sem necessidade de internet constante. Segurança total para a criança e paz para os pais.</p>
+            </div>
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border-b-8 border-purple-500 hover:-translate-y-2 transition-transform">
+                <div class="text-5xl mb-6">📈</div>
+                <h3 class="text-2xl font-bold mb-4">Progressão Real</h3>
+                <p class="text-slate-600 leading-relaxed">O sistema adapta a dificuldade e as habilidades (Leitura, Matemática, Lógica) conforme o desempenho, mantendo o desafio no nível ideal.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Validação Científica -->
+    <section id="ciencia" class="py-24 bg-blue-600 text-white overflow-hidden relative">
+        <div class="blob opacity-20 -bottom-40 -right-40 bg-white"></div>
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl md:text-6xl font-extrabold mb-8 leading-tight">Por que aprender <span class="text-yellow-400">em casa</span> é vital?</h2>
+                <div class="space-y-6 text-lg opacity-90 leading-relaxed">
+                    <p>Estudos da <strong>Neurociência Cognitiva</strong> comprovam que o cérebro infantil possui janelas de oportunidade de aprendizado que se fecham após os 10 anos.</p>
+                    <p>O <strong>Aprendizado Ativo</strong>, onde a criança precisa resolver problemas (como no ExpertKids), gera conexões sinápticas 3x mais fortes do que o aprendizado passivo (assistir vídeos).</p>
+                    <p>Ao estimular seu filho apenas 15 minutos por dia em casa, você está fornecendo o reforço que a escola sobrecarregada não consegue dar.</p>
+                </div>
+                <div class="mt-10 flex items-center gap-4 bg-white/10 p-6 rounded-3xl backdrop-blur-md">
+                    <span class="text-4xl">🔬</span>
+                    <p class="italic text-sm italic">Baseado em pesquisas de plasticidade cerebral e métodos de gamificação educativa da Universidade de Stanford.</p>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80" alt="Cérebro Ativo" class="rounded-[3rem] shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos -->
+    <section id="planos" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Invista no Futuro Agora</h2>
+            <p class="text-xl text-slate-500">Acesso imediato para toda a sua família.</p>
+        </div>
+
+        <div class="max-w-2xl mx-auto bg-white rounded-[3rem] p-12 border-4 border-blue-100 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-blue-600 text-white px-12 py-2 rotate-45 translate-x-10 translate-y-6 font-bold">OFERTA</div>
+            
+            <div class="flex justify-between items-start mb-8">
+                <div>
+                    <h3 class="text-3xl font-bold text-slate-900 mb-2">Plano Familiar Anual</h3>
+                    <p class="text-slate-500 font-medium italic">3 Licenças Inclusas</p>
+                </div>
+                <div class="text-right">
+                    <span class="text-slate-400 line-through block text-xl">R$ 197,00</span>
+                    <span class="text-5xl font-black text-blue-600">R$ 97,00</span>
+                </div>
+            </div>
+
+            <div class="space-y-6 mb-12">
+                <div class="flex items-center gap-4 text-lg">
+                    <span class="bg-green-100 text-green-600 p-1 rounded-full text-sm">✔</span>
+                    <span><strong>Acesso Ilimitado</strong> a todas as Skills</span>
+                </div>
+                <div class="flex items-center gap-4 text-lg">
+                    <span class="bg-green-100 text-green-600 p-1 rounded-full text-sm">✔</span>
+                    <span>Sistema de <strong>Vidas e Conquistas</strong></span>
+                </div>
+                <div class="flex items-center gap-4 text-lg">
+                    <span class="bg-green-100 text-green-600 p-1 rounded-full text-sm">✔</span>
+                    <span>Relatórios de progresso via Estrelas</span>
+                </div>
+            </div>
+
+            <a href="app.html" class="block w-full bg-blue-600 text-white text-center py-6 rounded-3xl font-bold text-2xl shadow-xl shadow-blue-200 hover:bg-blue-700 transition-all mb-4">
+                Comprar Acesso Anual 🚀
+            </a>
+            
+            <div id="trial" class="bg-yellow-50 p-6 rounded-2xl border-2 border-dashed border-yellow-300 text-center">
+                <p class="font-bold text-yellow-800">Quer ver o brilho nos olhos dele antes?</p>
+                <p class="text-sm text-yellow-700 mb-4">Liberamos o sistema por 4 horas para você testar gratuitamente com seu filho.</p>
+                <a href="app.html?trial=true" class="bg-yellow-400 text-yellow-900 px-8 py-3 rounded-xl font-bold inline-block hover:bg-yellow-500 transition-colors">Testar Grátis Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 bg-slate-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-center mb-16">Perguntas Frequentes</h2>
+            <div class="space-y-4">
+                <details class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-200 open:ring-2 open:ring-blue-400 transition-all">
+                    <summary class="font-bold text-xl cursor-pointer list-none flex justify-between items-center">
+                        Para qual idade é indicado?
+                        <span class="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-slate-600">O ExpertKids foi desenhado para crianças entre 5 e 9 anos, cobrindo desde a alfabetização básica até raciocínio lógico e matemático do 4º ano.</p>
+                </details>
+
+                <details class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-200 open:ring-2 open:ring-blue-400 transition-all">
+                    <summary class="font-bold text-xl cursor-pointer list-none flex justify-between items-center">
+                        Como funcionam as 3 licenças?
+                        <span class="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-slate-600">Ao adquirir o plano, você pode logar em até 3 dispositivos simultâneos. Por exemplo: um Tablet, o seu celular e o computador da casa.</p>
+                </details>
+
+                <details class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-200 open:ring-2 open:ring-blue-400 transition-all">
+                    <summary class="font-bold text-xl cursor-pointer list-none flex justify-between items-center">
+                        Precisa de internet para jogar?
+                        <span class="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-slate-600">Apenas para o login inicial e carregamento das imagens. Uma vez aberto, o motor de geração de exercícios funciona de forma independente, ideal para viagens!</p>
+                </details>
+
+                <details class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-200 open:ring-2 open:ring-blue-400 transition-all">
+                    <summary class="font-bold text-xl cursor-pointer list-none flex justify-between items-center">
+                        O pagamento é seguro?
+                        <span class="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-slate-600">Sim! Utilizamos as plataformas de pagamento mais seguras do Brasil. Se não gostar, você tem 7 dias de garantia incondicional.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating -->
+    <a href="https://wa.me/5511999999999?text=Quero%20saber%20mais%20sobre%20o%20ExpertKids" class="fixed bottom-10 right-10 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all z-50 flex items-center justify-center animate-pulse" title="Tire suas dúvidas">
+        <svg class="w-10 h-10 text-white-500" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20.52 3.48A11.78 11.78 0 0012.06 0C5.5 0 .16 5.34.16 11.91c0 2.1.55 4.15 1.6 5.96L0 24l6.27-1.64a11.9 11.9 0 005.79 1.48h.01c6.56 0 11.9-5.34 11.9-11.91 0-3.18-1.24-6.17-3.45-8.45zM12.07 21.7h-.01a9.8 9.8 0 01-4.99-1.37l-.36-.21-3.72.97.99-3.62-.23-.37a9.8 9.8 0 01-1.5-5.2c0-5.45 4.43-9.88 9.88-9.88 2.64 0 5.12 1.03 6.98 2.9a9.8 9.8 0 012.89 6.99c0 5.45-4.43 9.89-9.87 9.89zm5.43-7.41c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15s-.77.97-.94 1.17c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+        </svg>
+    </a>
+
+    <footer class="py-12 bg-slate-900 text-slate-400 text-center px-6">
+        <div class="text-2xl font-kids text-white mb-4">ExpertKids</div>
+        <p class="mb-8">Transformando tempo de tela em tempo de aprendizado.</p>
+        <div class="flex justify-center gap-8 text-sm font-bold uppercase tracking-widest">
+            <a href="#" class="hover:text-white transition-colors">Termos</a>
+            <a href="#" class="hover:text-white transition-colors">Política</a>
+            <a href="#" class="hover:text-white transition-colors">Contato</a>
+        </div>
+    </footer>
+
+</body>
+</html>
