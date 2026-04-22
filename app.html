@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>ExpertKids - Área do Aluno</title>
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/icon.png">
-    <!-- PWA -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#2563eb">
-    <link rel="apple-touch-icon" href="img/icon.png">
-    
-    <!-- Tailwind CSS -->
+    <!-- iOS PWA -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="ExpertKids">
+    <link rel="apple-touch-icon" href="img/192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="img/512.png">
+    <!-- Windows / Android extras -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileImage" content="img/192.png">
+    <meta name="msapplication-TileColor" content="#2563eb">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
     <style>
@@ -26,40 +31,87 @@
 </head>
 <body class="bg-blue-50 min-h-screen flex flex-col">
 
-    <!-- Tela de Login / Bloqueio -->
+    <!-- ── Barra de Atualização ─────────────────────────────────────────── -->
+    <div id="pwa-update-bar" class="hidden fixed top-0 left-0 right-0 z-[300] bg-blue-600 text-white text-sm font-bold py-3 px-4 flex items-center justify-center gap-3 shadow-lg">
+        <span>🆕 Nova versão disponível!</span>
+        <button id="pwa-update-btn" class="bg-white text-blue-600 px-4 py-1.5 rounded-full text-xs font-bold hover:bg-blue-50 active:scale-95 transition-all">
+            Atualizar agora
+        </button>
+        <button id="pwa-update-dismiss" class="ml-1 opacity-60 hover:opacity-100 text-lg leading-none">×</button>
+    </div>
+
+    <!-- ── Banner de Instalação iOS ─────────────────────────────────────── -->
+    <div id="ios-install-banner" class="hidden fixed bottom-0 left-0 right-0 z-[250] bg-white border-t-4 border-blue-200 shadow-2xl">
+        <div class="max-w-md mx-auto flex items-start gap-3 p-4">
+            <span class="text-3xl flex-shrink-0 mt-0.5">📲</span>
+            <div class="flex-1">
+                <p class="font-bold text-slate-800 text-sm">Instale o ExpertKids no iPhone!</p>
+                <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+                    Toque em <strong>Compartilhar</strong>
+                    <svg class="inline w-4 h-4 mx-0.5 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+                    e depois em <strong>"Adicionar à Tela de Início"</strong> para usar sem internet.
+                </p>
+            </div>
+            <button id="ios-install-close" class="text-slate-400 hover:text-slate-600 text-2xl font-bold leading-none flex-shrink-0">×</button>
+        </div>
+    </div>
+
+    <!-- ── Banner de Instalação Android / Chrome ─────────────────────────── -->
+    <div id="android-install-banner" class="hidden fixed bottom-0 left-0 right-0 z-[250] bg-white border-t-4 border-blue-200 shadow-2xl">
+        <div class="max-w-md mx-auto flex items-center gap-3 p-4">
+            <img src="img/icon.png" class="w-12 h-12 rounded-2xl flex-shrink-0" alt="ExpertKids">
+            <div class="flex-1">
+                <p class="font-bold text-slate-800 text-sm">Instalar ExpertKids</p>
+                <p class="text-xs text-slate-500">Use sem internet, direto da tela inicial</p>
+            </div>
+            <button id="android-install-btn" class="bg-blue-600 text-white px-4 py-2 rounded-xl font-bold text-sm hover:bg-blue-700 active:scale-95 transition-all flex-shrink-0">
+                Instalar
+            </button>
+            <button id="android-install-close" class="text-slate-400 hover:text-slate-600 text-2xl font-bold leading-none flex-shrink-0">×</button>
+        </div>
+    </div>
+
+    <!-- Tela de Login -->
     <div id="login-screen" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-blue-600/20 backdrop-blur-sm overflow-y-auto">
         <div class="glass-login w-full max-w-md p-8 my-auto rounded-[2.5rem] shadow-3xl text-center border-4 border-white">
             <div class="text-4xl mb-4">🌟</div>
-            <h2 class="font-kids text-2xl font-bold text-slate-800 mb-1">Bem-vindo!</h2>
-            <p class="text-sm text-slate-500 mb-6 font-bold">Faça login para começar.</p>
-            
-            <div class="space-y-3 text-left">
+            <h2 class="font-kids text-2xl font-bold text-slate-800 mb-1">Bem-vindo de volta!</h2>
+
+            <div class="bg-blue-50 border border-blue-200 rounded-2xl p-4 mb-6 text-left">
+                <p class="text-sm text-blue-700 font-bold mb-1">📧 Como entrar?</p>
+                <p class="text-xs text-blue-600 leading-relaxed">
+                    Use o <strong>mesmo e-mail informado no pagamento</strong>. Não é necessária senha — seu e-mail é sua chave de acesso.
+                </p>
+            </div>
+
+            <div class="space-y-4 text-left">
                 <div id="email-group">
-                    <label class="block text-[10px] font-bold text-slate-400 mb-1 ml-2 uppercase">E-mail</label>
-                    <input type="email" id="login-email" placeholder="E-mail dos pais" class="w-full px-5 py-3 rounded-xl border-2 border-slate-100 focus:border-blue-400 outline-none transition-all font-bold text-sm">
+                    <label class="block text-[10px] font-bold text-slate-400 mb-1 ml-2 uppercase">E-mail do pagamento</label>
+                    <input type="email" id="login-email" placeholder="Ex: pai@email.com" class="w-full px-5 py-4 rounded-xl border-2 border-slate-100 focus:border-blue-400 outline-none transition-all font-bold text-lg">
                 </div>
-                <div id="password-group">
-                    <label class="block text-[10px] font-bold text-slate-400 mb-1 ml-2 uppercase">Senha</label>
-                    <input type="password" id="login-password" placeholder="Sua senha" class="w-full px-5 py-3 rounded-xl border-2 border-slate-100 focus:border-blue-400 outline-none transition-all text-sm">
-                </div>
-                <button id="login-submit-btn" class="w-full bg-blue-600 text-white font-kids text-lg font-bold py-4 rounded-2xl shadow-xl hover:bg-blue-700 transition-all active:scale-95 mt-2">
-                    Entrar na Aventura
+                <button id="login-submit-btn" class="w-full bg-blue-600 text-white font-kids text-xl font-bold py-5 rounded-2xl shadow-xl hover:bg-blue-700 transition-all active:scale-95">
+                    Entrar na Aventura ✨
                 </button>
             </div>
 
-            <div id="trial-container" class="mt-6 pt-6 border-t-2 border-slate-50 hidden">
-                <p class="text-[10px] text-slate-400 mb-3 uppercase font-bold tracking-widest">Ainda não tem conta?</p>
-                <button id="start-trial-btn" class="w-full bg-green-500 text-white font-bold py-4 rounded-2xl shadow-lg hover:bg-green-600 transition-all text-sm">
-                    Testar Grátis (4 Horas)
-                </button>
+            <div id="login-error" class="hidden mt-4 bg-red-50 border border-red-200 text-red-600 text-sm font-bold p-4 rounded-2xl">
+                ❌ E-mail não encontrado. Verifique se é o mesmo usado no pagamento.
+                <a href="index.html" class="block mt-2 text-blue-500 underline font-bold">Adquirir acesso</a>
             </div>
-            
+
             <div id="trial-active-container" class="mt-6 pt-6 border-t-2 border-slate-50 hidden">
                 <div class="bg-yellow-100 text-yellow-700 p-4 rounded-2xl font-bold text-sm">
-                    ⏳ Período de teste ativo!
-                    <button id="resume-trial-btn" class="block w-full mt-2 bg-yellow-400 text-yellow-900 py-2 rounded-xl">Continuar Testando</button>
+                    ⏳ Teste grátis ativo!
+                    <button id="resume-trial-btn" class="block w-full mt-2 bg-yellow-400 text-yellow-900 py-2 rounded-xl font-bold">Continuar Jogando</button>
                 </div>
             </div>
+
+            <p class="mt-6 text-xs text-slate-400">Ainda não assinou? <a href="index.html" class="text-blue-500 font-bold underline">Clique aqui</a></p>
+            <p class="mt-3 text-xs text-slate-300">
+                <a href="termos.html" class="hover:text-slate-500 transition-colors">Termos de Uso</a>
+                <span class="mx-1">·</span>
+                <a href="privacidade.html" class="hover:text-slate-500 transition-colors">Privacidade</a>
+            </p>
         </div>
     </div>
 
@@ -69,245 +121,249 @@
             <span class="text-2xl">🌟</span>
             <h1 class="font-kids text-xl font-bold text-blue-600 tracking-tight">ExpertKids</h1>
         </div>
-        
         <div class="flex items-center gap-2">
-            <div class="bg-red-50 border-2 border-red-200 rounded-full px-3 py-1 flex items-center gap-1 shadow-sm">
-                <span class="text-lg">❤️</span>
-                <span id="lives-count" class="font-kids font-bold text-red-600 text-lg">3</span>
-            </div>
-            <div class="bg-yellow-100 border-2 border-yellow-400 rounded-full px-3 py-1 flex items-center gap-1 shadow-sm">
-                <span class="text-xl">⭐</span>
-                <span id="stars-top" class="font-kids font-bold text-yellow-700 text-lg">0</span>
-            </div>
+            <div class="bg-red-50 border-2 border-red-200 rounded-full px-3 py-1 flex items-center gap-1 shadow-sm font-bold text-red-600">❤️ <span id="lives-count">3</span></div>
+            <div class="bg-yellow-100 border-2 border-yellow-400 rounded-full px-3 py-1 flex items-center gap-1 shadow-sm font-bold text-yellow-700">⭐ <span id="stars-top">0</span></div>
         </div>
-
         <button id="toggle-sound" class="w-10 h-10 flex items-center justify-center bg-slate-100 rounded-full text-xl">🔊</button>
     </header>
 
-    <!-- App Content -->
-    <main id="app-container" class="flex-grow flex flex-col p-4 sm:p-6 max-w-lg mx-auto w-full text-center">
+    <main id="app-container" class="flex-grow flex flex-col p-4 sm:p-6 max-w-lg mx-auto w-full">
         <div id="game-area" class="flex-grow flex flex-col justify-center">
-            <!-- As mesmas telas do app anterior permanecem aqui -->
             <div id="setup-screen" class="space-y-6">
-                <h2 class="font-kids text-3xl font-bold text-slate-800 text-center mb-6 text-center">O que vamos aprender?</h2>
+                <h2 class="font-kids text-3xl font-bold text-slate-800 text-center mb-6">Escolha um Desafio:</h2>
                 <div class="grid grid-cols-1 gap-4">
-                    <button class="skill-btn btn-3d bg-green-500 text-white p-5 rounded-2xl flex items-center gap-4 text-left" data-skill="reading_basic">
-                        <span class="text-4xl bg-white/20 p-2 rounded-xl">📖</span>
-                        <div><div class="font-kids text-xl font-bold">Leitura</div></div>
-                    </button>
-                    <button class="skill-btn btn-3d bg-purple-500 text-white p-5 rounded-2xl flex items-center gap-4 text-left" data-skill="classification">
-                        <span class="text-4xl bg-white/20 p-2 rounded-xl">🔍</span>
-                        <div><div class="font-kids text-xl font-bold">Classificação</div></div>
-                    </button>
-                    <button class="skill-btn btn-3d bg-orange-500 text-white p-5 rounded-2xl flex items-center gap-4 text-left" data-skill="counting">
-                        <span class="text-4xl bg-white/20 p-2 rounded-xl">🔢</span>
-                        <div><div class="font-kids text-xl font-bold">Contagem</div></div>
-                    </button>
-                    <button class="skill-btn btn-3d bg-blue-600 text-white p-5 rounded-2xl flex items-center gap-4 text-left" data-skill="math_basic">
-                        <span class="text-4xl bg-white/20 p-2 rounded-xl">➕</span>
-                        <div><div class="font-kids text-xl font-bold">Super Matemática</div></div>
-                    </button>
+                    <button class="skill-btn btn-3d bg-green-500 text-white p-5 rounded-2xl flex items-center gap-4 text-left" data-skill="reading_basic"><span class="text-4xl">📖</span><div class="font-kids text-xl font-bold">Leitura</div></button>
+                    <button class="skill-btn btn-3d bg-purple-500 text-white p-5 rounded-2xl flex items-center gap-4 text-left" data-skill="classification"><span class="text-4xl">🔍</span><div class="font-kids text-xl font-bold">Classificação</div></button>
+                    <button class="skill-btn btn-3d bg-orange-500 text-white p-5 rounded-2xl flex items-center gap-4 text-left" data-skill="counting"><span class="text-4xl">🔢</span><div class="font-kids text-xl font-bold">Contagem</div></button>
+                    <button class="skill-btn btn-3d bg-blue-600 text-white p-5 rounded-2xl flex items-center gap-4 text-left" data-skill="math_basic"><span class="text-4xl">➕</span><div class="font-kids text-xl font-bold">Super Matemática</div></button>
                 </div>
-
-                <!-- Acesso Área dos Pais -->
-                <div class="mt-12 text-center">
-                    <button id="open-parents-gate" class="text-slate-400 font-bold flex items-center justify-center gap-2 mx-auto hover:text-blue-500 transition-colors">
-                        <span class="text-xl">⚙️</span> Área dos Pais
-                    </button>
-                </div>
+                <div class="mt-8 text-center"><button id="open-parents-gate" class="text-slate-400 font-bold flex items-center justify-center gap-2 mx-auto">⚙️ Área dos Pais</button></div>
             </div>
 
-            <!-- Área dos Pais (Oculta por padrão) -->
-            <div id="parents-screen" class="hidden space-y-6 pop-in text-left">
-                <div class="flex items-center justify-between mb-4">
-                    <h2 class="font-kids text-2xl font-bold text-slate-800">Configurações</h2>
-                    <button id="close-parents" class="text-blue-500 font-bold">Voltar</button>
-                </div>
-
-                <div class="bg-white rounded-3xl p-6 shadow-md space-y-4">
-                    <h3 class="font-bold text-blue-600 uppercase text-xs tracking-widest text-left">Dados da Família</h3>
-                    <div class="space-y-3">
-                        <input type="text" id="parent-father" placeholder="Nome do Pai" class="w-full p-3 rounded-xl border-2 border-slate-50 outline-none focus:border-blue-200">
-                        <input type="text" id="parent-mother" placeholder="Nome da Mãe" class="w-full p-3 rounded-xl border-2 border-slate-50 outline-none focus:border-blue-200">
-                        <input type="tel" id="parent-whatsapp" placeholder="WhatsApp (DDD + Número)" class="w-full p-3 rounded-xl border-2 border-slate-50 outline-none focus:border-blue-200">
-                        <button id="save-parents-data" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold shadow-lg">Salvar Dados</button>
-                    </div>
-                </div>
-
-                <div class="bg-blue-600 rounded-3xl p-6 text-white shadow-xl text-left">
-                    <h3 class="font-bold uppercase text-xs tracking-widest opacity-80 mb-4 text-left">Informações do Plano</h3>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <p class="text-[10px] opacity-70">DATA DE INÍCIO</p>
-                            <p id="plan-start" class="font-bold">--/--/----</p>
-                        </div>
-                        <div>
-                            <p class="text-[10px] opacity-70">PRÓX. VENCIMENTO</p>
-                            <p id="plan-end" class="font-bold text-yellow-300">--/--/----</p>
-                        </div>
-                        <div class="col-span-2 pt-2 border-t border-white/20">
-                            <p class="text-[10px] opacity-70">VALOR DO PLANO</p>
-                            <p class="text-xl font-black">R$ 97,00 <span class="text-xs font-normal opacity-70">/ano</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Portal de Segurança (Gate) -->
-            <div id="parents-gate" class="fixed inset-0 z-[150] bg-slate-900/90 backdrop-blur-md hidden items-center justify-center p-6 text-white text-center">
-                <div class="max-w-xs space-y-6">
-                    <h3 class="text-2xl font-bold">Acesso Restrito</h3>
-                    <p class="text-slate-400">Por favor, resolva a conta para provar que você é um adulto:</p>
-                    <div id="gate-question" class="text-4xl font-black text-blue-400">7 + 8 = ?</div>
-                    <input type="number" id="gate-answer" class="w-full bg-slate-800 border-2 border-slate-700 p-4 rounded-2xl text-center text-2xl outline-none focus:border-blue-500">
-                    <div class="flex gap-2">
-                        <button id="cancel-gate" class="flex-1 py-4 font-bold text-slate-500">Cancelar</button>
-                        <button id="verify-gate" class="flex-1 bg-blue-600 py-4 rounded-2xl font-bold">Entrar</button>
-                    </div>
-                </div>
-            </div>
+            <!-- Outras telas controladas pelo app.js ... -->
             <div id="exercise-screen" class="hidden flex-grow flex flex-col"></div>
             <div id="feedback-screen" class="hidden flex-grow flex flex-col justify-center items-center"></div>
+            <div id="parents-screen" class="hidden space-y-6 pop-in text-left">
+                <div class="flex items-center justify-between mb-4"><h2 class="font-kids text-2xl font-bold">Configurações</h2><button id="close-parents" class="text-blue-500 font-bold">Voltar</button></div>
+                <div class="bg-white rounded-3xl p-6 shadow-md space-y-4">
+                    <input type="text" id="parent-father" placeholder="Pai" class="w-full p-3 rounded-xl border-2">
+                    <input type="text" id="parent-mother" placeholder="Mãe" class="w-full p-3 rounded-xl border-2">
+                    <input type="tel" id="parent-whatsapp" placeholder="Whats" class="w-full p-3 rounded-xl border-2">
+                    <button id="save-parents-data" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold">Salvar</button>
+                </div>
+                <div class="bg-blue-600 rounded-3xl p-6 text-white shadow-xl">
+                    <p class="text-xs opacity-70">PLANO ATIVO ATÉ:</p>
+                    <p id="plan-end" class="text-2xl font-black">--/--/----</p>
+                </div>
+            </div>
         </div>
     </main>
 
+    <!-- Portal Segurança -->
+    <div id="parents-gate" class="fixed inset-0 z-[150] bg-slate-900/90 backdrop-blur-md hidden items-center justify-center p-6 text-white text-center">
+        <div class="max-w-xs space-y-6">
+            <h3 class="text-2xl font-bold">Acesso Pais</h3>
+            <div id="gate-question" class="text-4xl font-black text-blue-400">?</div>
+            <input type="number" id="gate-answer" class="w-full bg-slate-800 border-2 p-4 rounded-2xl text-center text-2xl">
+            <div class="flex gap-2"><button id="cancel-gate" class="flex-1">Sair</button><button id="verify-gate" class="flex-1 bg-blue-600 py-4 rounded-2xl">Entrar</button></div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/config.js"></script>
     <script src="js/knowledgeBase.js"></script>
     <script src="js/templates.js"></script>
     <script src="js/generator.js"></script>
     <script src="js/payment.js"></script>
     <script src="js/app.js"></script>
-    
     <script>
-        // Registro do Service Worker para PWA Offline
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js')
-                    .then(reg => console.log('ExpertKids PWA pronto!'))
-                    .catch(err => console.log('Erro ao registrar Service Worker:', err));
-            });
-        }
-
-        // Lógica de Teste Grátis e Login
         $(document).ready(function() {
-            const savedEmail = localStorage.getItem('expertkids_user_email');
-            const trialStatus = PaymentProvider.checkTrialStatus();
-
-            // UI Inteligente para usuário recorrente
+            // Pré-preenche o e-mail: prioridade para URL param (vindo do pagamento), depois localStorage
+            const urlEmail   = new URLSearchParams(window.location.search).get('email');
+            const savedEmail = urlEmail || localStorage.getItem('expertkids_user_email');
             if (savedEmail) {
-                const $emailInput = $('#login-email');
-                $emailInput.val(savedEmail);
-                $emailInput.addClass('bg-blue-50 border-blue-200 text-blue-700 font-black');
-                $('#login-password').focus();
+                $('#login-email').val(savedEmail).addClass('bg-blue-50 text-blue-700 border-blue-200');
             }
 
-            // Verifica Trial
-            const urlParams = new URLSearchParams(window.location.search);
-            const isTrialRequest = urlParams.get('trial') === 'true';
+            const trialStatus = PaymentProvider.checkTrialStatus();
+            if (trialStatus.active) { $('#trial-active-container').removeClass('hidden'); }
 
-            if (trialStatus.active) {
-                $('#trial-active-container').removeClass('hidden');
-                $('#resume-trial-btn').text(`Continuar (${trialStatus.remainingTime} restantes)`);
-            } else if (isTrialRequest && !trialStatus.expired) {
-                $('#trial-container').removeClass('hidden');
-            }
-
-            // Ação de Login
             $('#login-submit-btn').on('click', async function() {
-                const $btn = $(this);
-                const email = $('#login-email').val();
-                const pass = $('#login-password').val();
+                const email = $('#login-email').val().trim().toLowerCase();
+                if (!email) return;
+                $('#login-error').addClass('hidden');
+                $(this).prop('disabled', true).text('Verificando...');
 
-                if (!email || !pass) {
-                    alert('Por favor, preencha todos os campos.');
+                // E-mails de teste: entram sem consultar a API
+                const isTestEmail = (CONFIG.TEST_EMAILS || [])
+                    .map(e => e.toLowerCase()).includes(email);
+
+                if (isTestEmail) {
+                    localStorage.setItem('expertkids_user_email', email);
+                    localStorage.setItem('expertkids_plan_data', JSON.stringify({
+                        status: 'active', email, expiryDate: '2099-12-31'
+                    }));
+                    $('#login-screen').fadeOut();
                     return;
                 }
 
-                $btn.prop('disabled', true).text('Verificando acesso...');
-
-                try {
-                    const access = await PaymentProvider.verifyAccess(email);
-                    
-                    if (access.status === 'active') {
-                        localStorage.setItem('expertkids_user_email', email);
-                        localStorage.setItem('expertkids_plan_data', JSON.stringify(access));
-                        $('#login-screen').fadeOut();
-                    } else {
-                        alert('E-mail não encontrado na lista de assinantes ativos. Verifique seu pagamento ou inicie um teste grátis.');
-                    }
-                } catch (e) {
-                    alert('Erro ao consultar servidor. Tente novamente.');
-                } finally {
-                    $btn.prop('disabled', false).text('Entrar na Aventura');
+                const access = await PaymentProvider.verifyAccess(email);
+                if (access.status === 'active') {
+                    localStorage.setItem('expertkids_user_email', email);
+                    localStorage.setItem('expertkids_plan_data', JSON.stringify(access));
+                    $('#login-screen').fadeOut();
+                } else {
+                    $('#login-error').removeClass('hidden');
+                    $(this).prop('disabled', false).text('Entrar na Aventura ✨');
                 }
             });
 
-            $('#start-trial-btn').on('click', function() {
-                localStorage.setItem('expertkids_trial_start', Date.now());
-                $('#login-screen').fadeOut();
-            });
-
-            $('#resume-trial-btn').on('click', function() {
-                $('#login-screen').fadeOut();
-            });
-
-            // Lógica da Área dos Pais
-            let gateAnswer = 0;
+            $('#resume-trial-btn').on('click', () => $('#login-screen').fadeOut());
             
-            $('#open-parents-gate').on('click', function() {
-                const n1 = Math.floor(Math.random() * 10) + 5;
-                const n2 = Math.floor(Math.random() * 10) + 5;
-                gateAnswer = n1 + n2;
-                $('#gate-question').text(`${n1} + ${n2} = ?`);
-                $('#parents-gate').css('display', 'flex').hide().fadeIn();
-                $('#gate-answer').val('').focus();
+            // Lógica Área dos Pais
+            let gateAns = 0;
+            $('#open-parents-gate').on('click', () => {
+                const n1 = Math.floor(Math.random()*10)+5; const n2 = Math.floor(Math.random()*10)+5;
+                gateAns = n1+n2; $('#gate-question').text(`${n1} + ${n2} = ?`);
+                $('#parents-gate').css('display','flex');
             });
-
-            $('#verify-gate').on('click', function() {
-                if (parseInt($('#gate-answer').val()) === gateAnswer) {
-                    $('#parents-gate').fadeOut();
-                    showParentsScreen();
-                } else {
-                    alert('Resposta incorreta. Tente novamente!');
-                    $('#parents-gate').fadeOut();
+            $('#verify-gate').on('click', () => {
+                if(parseInt($('#gate-answer').val()) === gateAns) {
+                    $('#parents-gate').hide(); $('#setup-screen').hide(); $('#parents-screen').show();
+                    const p = JSON.parse(localStorage.getItem('expertkids_plan_data') || '{}');
+                    $('#plan-end').text(p.expiryDate ? new Date(p.expiryDate).toLocaleDateString() : 'TESTE');
                 }
-            });
-
-            $('#cancel-gate').on('click', () => $('#parents-gate').fadeOut());
-
-            function showParentsScreen() {
-                $('#setup-screen').addClass('hidden');
-                $('#parents-screen').removeClass('hidden');
-                
-                // Carrega dados salvos
-                $('#parent-father').val(localStorage.getItem('ek_father') || '');
-                $('#parent-mother').val(localStorage.getItem('ek_mother') || '');
-                $('#parent-whatsapp').val(localStorage.getItem('ek_whatsapp') || '');
-                
-                // Carrega dados do plano salvos no login
-                const planDataRaw = localStorage.getItem('expertkids_plan_data');
-                if (planDataRaw) {
-                    const plan = JSON.parse(planDataRaw);
-                    $('#plan-start').text(new Date(plan.startDate).toLocaleDateString());
-                    $('#plan-end').text(new Date(plan.expiryDate).toLocaleDateString());
-                } else {
-                    $('#plan-start').text('TESTE ATIVO');
-                    $('#plan-end').text('EXPIRA EM BREVE');
-                }
-            }
-
-            $('#save-parents-data').on('click', function() {
-                localStorage.setItem('ek_father', $('#parent-father').val());
-                localStorage.setItem('ek_mother', $('#parent-mother').val());
-                localStorage.setItem('ek_whatsapp', $('#parent-whatsapp').val());
-                alert('Dados salvos com sucesso!');
-            });
-
-            $('#close-parents').on('click', function() {
-                $('#parents-screen').addClass('hidden');
-                $('#setup-screen').removeClass('hidden');
             });
         });
+    </script>
+
+    <script>
+    // ═══════════════════════════════════════════════════════════════════════
+    // PWA: Service Worker + Install Prompts + Update Flow
+    // ═══════════════════════════════════════════════════════════════════════
+    (function () {
+        'use strict';
+
+        // ── Helpers ─────────────────────────────────────────────────────────
+        function isIOS() {
+            return /iphone|ipad|ipod/i.test(navigator.userAgent) && !window.MSStream;
+        }
+        function isInstalled() {
+            return window.matchMedia('(display-mode: standalone)').matches
+                || window.navigator.standalone === true;
+        }
+
+        // ── Service Worker Registration + Update Flow ────────────────────────
+        if ('serviceWorker' in navigator) {
+            let waitingWorker = null;
+
+            function showUpdateBar(worker) {
+                waitingWorker = worker;
+                const bar = document.getElementById('pwa-update-bar');
+                bar.classList.remove('hidden');
+                bar.classList.add('flex');
+                // Empurra o conteúdo da página para baixo da barra
+                document.body.style.paddingTop = bar.offsetHeight + 'px';
+            }
+
+            function hideUpdateBar() {
+                const bar = document.getElementById('pwa-update-bar');
+                bar.classList.add('hidden');
+                bar.classList.remove('flex');
+                document.body.style.paddingTop = '';
+            }
+
+            navigator.serviceWorker.register('sw.js').then(function (reg) {
+                // Já tem um SW esperando desde antes do carregamento da página
+                if (reg.waiting) {
+                    showUpdateBar(reg.waiting);
+                }
+
+                // Novo SW encontrado durante esta sessão
+                reg.addEventListener('updatefound', function () {
+                    const installing = reg.installing;
+                    installing.addEventListener('statechange', function () {
+                        if (installing.state === 'installed' && navigator.serviceWorker.controller) {
+                            showUpdateBar(installing);
+                        }
+                    });
+                });
+
+                // Verifica atualizações a cada 60 min (para apps que ficam abertos)
+                setInterval(function () { reg.update(); }, 60 * 60 * 1000);
+            }).catch(function (err) {
+                console.warn('[SW] Falha ao registrar:', err);
+            });
+
+            // Quando o SW trocar (após skipWaiting), recarrega a página
+            var refreshing = false;
+            navigator.serviceWorker.addEventListener('controllerchange', function () {
+                if (!refreshing) {
+                    refreshing = true;
+                    window.location.reload();
+                }
+            });
+
+            // Botão "Atualizar agora"
+            document.getElementById('pwa-update-btn').addEventListener('click', function () {
+                if (waitingWorker) waitingWorker.postMessage({ type: 'SKIP_WAITING' });
+            });
+
+            // Dismiss da barra de atualização
+            document.getElementById('pwa-update-dismiss').addEventListener('click', hideUpdateBar);
+        }
+
+        // ── Install Prompt: Android / Chrome / Edge ──────────────────────────
+        var deferredPrompt = null;
+
+        window.addEventListener('beforeinstallprompt', function (e) {
+            e.preventDefault();
+            deferredPrompt = e;
+            if (!isInstalled()) {
+                document.getElementById('android-install-banner').classList.remove('hidden');
+            }
+        });
+
+        document.getElementById('android-install-btn').addEventListener('click', function () {
+            if (!deferredPrompt) return;
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then(function (result) {
+                if (result.outcome === 'accepted') {
+                    document.getElementById('android-install-banner').classList.add('hidden');
+                }
+                deferredPrompt = null;
+            });
+        });
+
+        document.getElementById('android-install-close').addEventListener('click', function () {
+            document.getElementById('android-install-banner').classList.add('hidden');
+            deferredPrompt = null;
+        });
+
+        window.addEventListener('appinstalled', function () {
+            document.getElementById('android-install-banner').classList.add('hidden');
+            deferredPrompt = null;
+        });
+
+        // ── Install Prompt: iOS Safari ───────────────────────────────────────
+        // Safari não dispara beforeinstallprompt; mostramos instruções manuais.
+        if (isIOS() && !isInstalled()) {
+            var dismissed = localStorage.getItem('ek_ios_prompt_v1');
+            if (!dismissed) {
+                // Aguarda 4 s para não assustar o usuário logo na abertura
+                setTimeout(function () {
+                    document.getElementById('ios-install-banner').classList.remove('hidden');
+                }, 4000);
+            }
+        }
+
+        document.getElementById('ios-install-close').addEventListener('click', function () {
+            document.getElementById('ios-install-banner').classList.add('hidden');
+            localStorage.setItem('ek_ios_prompt_v1', '1');
+        });
+
+    })();
     </script>
 </body>
 </html>

@@ -3,32 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExpertKids | Alfabetização e Matemática Online para Crianças de 5 a 9 anos</title>
-    
-    <!-- Favicon -->
+    <title>ExpertKids | Seu filho mais inteligente em 15 minutos por dia</title>
+
     <link rel="icon" type="image/png" href="img/icon.png">
-    
-    <!-- SEO Básico -->
-    <meta name="description" content="ExpertKids é a plataforma líder em reforço escolar dinâmico. Exercícios infinitos de leitura, matemática e lógica baseados em neurociência. Teste grátis hoje!">
-    <meta name="keywords" content="educação infantil, reforço escolar, alfabetização online, matemática para crianças, jogos educativos, PWA educativo">
+    <link rel="canonical" href="https://expertkids.space/">
+
+    <meta name="description" content="O ExpertKids usa repetição espaçada e gamificação para acelerar a alfabetização e matemática de crianças de 5 a 9 anos. R$ 0,27 por dia. Teste grátis.">
+    <meta name="keywords" content="educação infantil, reforço escolar, alfabetização online, matemática para crianças, jogos educativos">
     <meta name="author" content="ExpertKids">
-    <link rel="canonical" href="https://expertkids.com.br/">
 
-    <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://expertkids.com.br/">
-    <meta property="og:title" content="ExpertKids | O Futuro do seu Filho Começa Aqui">
-    <meta property="og:description" content="Transforme o tempo de tela em aprendizado ativo com exercícios dinâmicos e seguros.">
+    <meta property="og:url" content="https://expertkids.space/">
+    <meta property="og:title" content="ExpertKids | Seu filho mais inteligente em 15 minutos por dia">
+    <meta property="og:description" content="Plataforma educativa baseada em neurociência. Exercícios infinitos de leitura, matemática e lógica para crianças de 5 a 9 anos.">
     <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/3067/3067451.png">
-
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://expertkids.com.br/">
-    <meta property="twitter:title" content="ExpertKids | Educação Divertida">
-    <meta property="twitter:description" content="Plataforma de exercícios dinâmicos para crianças de 5 a 9 anos.">
-    <meta property="twitter:image" content="https://cdn-icons-png.flaticon.com/512/3067/3067451.png">
 
-    <!-- Dados Estruturados (Google Rich Results) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -36,252 +26,664 @@
       "name": "ExpertKids",
       "operatingSystem": "Web, Android, iOS",
       "applicationCategory": "EducationApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "97.00",
-        "priceCurrency": "BRL"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "1024"
-      }
+      "offers": { "@type": "Offer", "price": "97.00", "priceCurrency": "BRL" },
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "1024" }
     }
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .font-kids { font-family: 'Fredoka', sans-serif; }
         .bg-kids-pattern {
-            background-color: #ffffff;
-            background-image:  radial-gradient(#3b82f6 0.5px, transparent 0.5px), radial-gradient(#3b82f6 0.5px, #ffffff 0.5px);
+            background-color: #fff;
+            background-image: radial-gradient(#3b82f6 0.5px, transparent 0.5px), radial-gradient(#3b82f6 0.5px, #fff 0.5px);
             background-size: 20px 20px;
-            background-position: 0 0,10px 10px;
-            opacity: 0.05;
+            background-position: 0 0, 10px 10px;
+            opacity: 0.04;
         }
         .blob {
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(147, 51, 234, 0.2) 100%);
-            filter: blur(80px);
-            border-radius: 50%;
-            z-index: -1;
+            position: absolute; width: 500px; height: 500px;
+            background: linear-gradient(135deg, rgba(59,130,246,0.2) 0%, rgba(147,51,234,0.2) 100%);
+            filter: blur(80px); border-radius: 50%; z-index: -1;
         }
-        .glass {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .counter-btn {
+            width: 44px; height: 44px; border-radius: 50%; font-size: 1.4rem; font-weight: 800;
+            display: flex; align-items: center; justify-content: center;
+            transition: all .15s; user-select: none; cursor: pointer;
         }
+        .discount-badge { animation: pop .4s cubic-bezier(.175,.885,.32,1.275); }
+        @keyframes pop { 0%{transform:scale(.7);opacity:0} 100%{transform:scale(1);opacity:1} }
+        details summary::-webkit-details-marker { display: none; }
     </style>
 </head>
 <body class="bg-slate-50 overflow-x-hidden">
 
-    <div class="bg-kids-pattern fixed inset-0 pointer-events-none"></div>
+<div class="bg-kids-pattern fixed inset-0 pointer-events-none"></div>
 
-    <!-- Header -->
-    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-blue-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-kids font-bold text-blue-600 flex items-center gap-2">
-                <span class="text-3xl">🌟</span> ExpertKids
-            </div>
-            <div class="hidden md:flex gap-8 font-bold text-slate-600">
-                <a href="#como-funciona" class="hover:text-blue-600 transition-colors">Como funciona</a>
-                <a href="#ciencia" class="hover:text-blue-600 transition-colors">Ciência</a>
-                <a href="#faq" class="hover:text-blue-600 transition-colors">Dúvidas</a>
-            </div>
-            <a href="app.html" class="bg-blue-600 text-white px-8 py-3 rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200">
-                Acessar App
+<!-- ===== NAV ===== -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-blue-100">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-kids font-bold text-blue-600 flex items-center gap-2">
+            <span class="text-3xl">🌟</span> ExpertKids
+        </div>
+        <div class="hidden md:flex gap-8 font-bold text-slate-600">
+            <a href="#como-funciona" class="hover:text-blue-600 transition-colors">Como funciona</a>
+            <a href="#depoimentos" class="hover:text-blue-600 transition-colors">Depoimentos</a>
+            <a href="#planos" class="hover:text-blue-600 transition-colors">Planos</a>
+            <a href="escolas.html" class="hover:text-blue-600 transition-colors">Para Escolas</a>
+        </div>
+        <a href="app.html" class="bg-blue-600 text-white px-6 py-3 rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 text-sm">
+            Já tenho acesso →
+        </a>
+    </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="relative pt-32 pb-20 px-6 max-w-7xl mx-auto text-center md:text-left md:flex items-center gap-12">
+    <div class="blob -top-20 -left-20"></div>
+    <div class="md:w-1/2">
+        <span class="bg-red-100 text-red-600 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-6 inline-block">
+            ⚠️ A janela de aprendizado fecha aos 10 anos
+        </span>
+        <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 leading-[1.1] mb-6">
+            Seu filho está<br/>
+            <span class="text-blue-600">perdendo o melhor<br/>momento para aprender.</span>
+        </h1>
+        <p class="text-xl text-slate-600 mb-4 leading-relaxed">
+            O cérebro de 5 a 9 anos é uma esponja neural. O <strong>ExpertKids</strong> usa esse momento para construir uma base sólida de leitura e matemática — em <strong>apenas 15 minutos por dia</strong>.
+        </p>
+        <p class="text-slate-500 mb-10 text-lg">
+            Enquanto outras crianças assistem vídeos passivamente, o seu filho estará <strong>resolvendo problemas e ficando à frente</strong>.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#planos" class="bg-blue-600 text-white px-10 py-5 rounded-3xl font-bold text-xl shadow-2xl shadow-blue-300 hover:scale-105 transition-all text-center">
+                Garantir Acesso Agora 🚀
+            </a>
+            <a href="app.html?trial=true" class="bg-white border-2 border-slate-200 text-slate-700 px-10 py-5 rounded-3xl font-bold text-xl hover:border-blue-300 transition-all text-center">
+                Testar Grátis (4h)
             </a>
         </div>
-    </nav>
-
-    <!-- Hero -->
-    <header class="relative pt-32 pb-20 px-6 max-w-7xl mx-auto text-center md:text-left md:flex items-center gap-12">
-        <div class="blob -top-20 -left-20"></div>
-        <div class="md:w-1/2">
-            <span class="bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-6 inline-block">Educativo & Seguro</span>
-            <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 leading-[1.1] mb-6">
-                Seu filho merece <br/> <span class="text-blue-600">aprender brincando.</span>
-            </h1>
-            <p class="text-xl text-slate-600 mb-10 leading-relaxed">
-                O <strong>ExpertKids</strong> utiliza o método de repetição espaçada e lógica visual para acelerar a alfabetização e o raciocínio matemático em casa.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#planos" class="bg-blue-600 text-white px-10 py-5 rounded-3xl font-bold text-xl shadow-2xl shadow-blue-300 hover:scale-105 transition-all text-center">
-                    Garantir Acesso Agora
-                </a>
-                <a href="#trial" class="bg-white border-2 border-slate-200 text-slate-700 px-10 py-5 rounded-3xl font-bold text-xl hover:border-blue-300 transition-all text-center">
-                    Testar Grátis
-                </a>
-            </div>
-        </div>
-        <div class="md:w-1/2 mt-16 md:mt-0 relative">
-            <img src="https://images.unsplash.com/photo-1525829528215-ffae12a76ac8?auto=format&fit=crop&w=800&q=80" alt="Criança Feliz" class="rounded-[3rem] shadow-3xl rotate-3 border-8 border-white">
-            <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-3xl shadow-xl flex items-center gap-4 animate-bounce">
-                <span class="text-4xl">⭐</span>
-                <div>
-                    <p class="font-bold text-slate-900">+10.000</p>
-                    <p class="text-sm text-slate-500 italic">Alunos Felizes</p>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- O que é o sistema (Cards) -->
-    <section id="como-funciona" class="py-24 max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">O que é o ExpertKids?</h2>
-            <p class="text-xl text-slate-500 max-w-2xl mx-auto">Mais que um jogo, uma ferramenta de desenvolvimento cognitivo completa para crianças de 5 a 9 anos.</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border-b-8 border-blue-500 hover:-translate-y-2 transition-transform">
-                <div class="text-5xl mb-6">🧠</div>
-                <h3 class="text-2xl font-bold mb-4">Exercícios Infinitos</h3>
-                <p class="text-slate-600 leading-relaxed">Nosso motor exclusivo gera exercícios diferentes a cada clique. Seu filho nunca vai decorar respostas, ele vai <strong>aprender a lógica</strong>.</p>
-            </div>
-            <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border-b-8 border-green-500 hover:-translate-y-2 transition-transform">
-                <div class="text-5xl mb-6">🛡️</div>
-                <h3 class="text-2xl font-bold mb-4">Ambiente Blindado</h3>
-                <p class="text-slate-600 leading-relaxed">Zero anúncios, zero vídeos aleatórios e sem necessidade de internet constante. Segurança total para a criança e paz para os pais.</p>
-            </div>
-            <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border-b-8 border-purple-500 hover:-translate-y-2 transition-transform">
-                <div class="text-5xl mb-6">📈</div>
-                <h3 class="text-2xl font-bold mb-4">Progressão Real</h3>
-                <p class="text-slate-600 leading-relaxed">O sistema adapta a dificuldade e as habilidades (Leitura, Matemática, Lógica) conforme o desempenho, mantendo o desafio no nível ideal.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Validação Científica -->
-    <section id="ciencia" class="py-24 bg-blue-600 text-white overflow-hidden relative">
-        <div class="blob opacity-20 -bottom-40 -right-40 bg-white"></div>
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        <p class="mt-4 text-sm text-slate-400">🛡️ 7 dias de garantia total · Sem cartão para o teste grátis</p>
+    </div>
+    <div class="md:w-1/2 mt-16 md:mt-0 relative">
+        <img src="https://images.unsplash.com/photo-1525829528215-ffae12a76ac8?auto=format&fit=crop&w=800&q=80"
+            alt="Criança aprendendo com tablet" class="rounded-[3rem] shadow-2xl rotate-2 border-8 border-white">
+        <div class="absolute -bottom-6 -left-6 bg-white p-5 rounded-3xl shadow-xl flex items-center gap-3 animate-bounce">
+            <span class="text-3xl">⭐</span>
             <div>
-                <h2 class="text-4xl md:text-6xl font-extrabold mb-8 leading-tight">Por que aprender <span class="text-yellow-400">em casa</span> é vital?</h2>
-                <div class="space-y-6 text-lg opacity-90 leading-relaxed">
-                    <p>Estudos da <strong>Neurociência Cognitiva</strong> comprovam que o cérebro infantil possui janelas de oportunidade de aprendizado que se fecham após os 10 anos.</p>
-                    <p>O <strong>Aprendizado Ativo</strong>, onde a criança precisa resolver problemas (como no ExpertKids), gera conexões sinápticas 3x mais fortes do que o aprendizado passivo (assistir vídeos).</p>
-                    <p>Ao estimular seu filho apenas 15 minutos por dia em casa, você está fornecendo o reforço que a escola sobrecarregada não consegue dar.</p>
-                </div>
-                <div class="mt-10 flex items-center gap-4 bg-white/10 p-6 rounded-3xl backdrop-blur-md">
-                    <span class="text-4xl">🔬</span>
-                    <p class="italic text-sm italic">Baseado em pesquisas de plasticidade cerebral e métodos de gamificação educativa da Universidade de Stanford.</p>
-                </div>
-            </div>
-            <div class="relative">
-                <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80" alt="Cérebro Ativo" class="rounded-[3rem] shadow-2xl">
+                <p class="font-extrabold text-slate-900 text-lg">+12.400</p>
+                <p class="text-xs text-slate-500">crianças aprendendo agora</p>
             </div>
         </div>
-    </section>
+        <div class="absolute -top-4 -right-4 bg-green-500 text-white p-4 rounded-2xl shadow-lg font-bold text-sm text-center">
+            <p class="text-2xl font-black">4.9⭐</p>
+            <p>avaliação</p>
+        </div>
+    </div>
+</header>
 
-    <!-- Planos -->
-    <section id="planos" class="py-24 relative">
-        <div class="max-w-7xl mx-auto px-6 text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Invista no Futuro Agora</h2>
-            <p class="text-xl text-slate-500">Acesso imediato para toda a sua família.</p>
+<!-- ===== PROVA SOCIAL STRIP ===== -->
+<section class="bg-blue-600 py-8 px-6">
+    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-center">
+        <div>
+            <p class="text-3xl font-black">12.400+</p>
+            <p class="text-blue-200 text-sm font-bold">Crianças ativas</p>
+        </div>
+        <div>
+            <p class="text-3xl font-black">4.9 ⭐</p>
+            <p class="text-blue-200 text-sm font-bold">Avaliação média</p>
+        </div>
+        <div>
+            <p class="text-3xl font-black">15 min</p>
+            <p class="text-blue-200 text-sm font-bold">Por dia é suficiente</p>
+        </div>
+        <div>
+            <p class="text-3xl font-black">R$ 0,27</p>
+            <p class="text-blue-200 text-sm font-bold">Por dia (plano anual)</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== COMO FUNCIONA ===== -->
+<section id="como-funciona" class="py-24 max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Como o ExpertKids funciona?</h2>
+        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Sem aulas gravadas. Sem vídeos. Seu filho aprende fazendo — como o cérebro foi projetado.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border-b-8 border-blue-500 hover:-translate-y-2 transition-transform">
+            <div class="text-5xl mb-6">🧠</div>
+            <h3 class="text-2xl font-bold mb-4">Exercícios Infinitos</h3>
+            <p class="text-slate-600 leading-relaxed">O motor exclusivo gera combinações novas a cada sessão. Seu filho <strong>nunca repete o mesmo exercício</strong> — aprende a lógica, não a resposta.</p>
+        </div>
+        <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border-b-8 border-green-500 hover:-translate-y-2 transition-transform">
+            <div class="text-5xl mb-6">🛡️</div>
+            <h3 class="text-2xl font-bold mb-4">Ambiente 100% Seguro</h3>
+            <p class="text-slate-600 leading-relaxed">Zero anúncios, zero vídeos aleatórios, zero distração. <strong>Segurança total para a criança</strong> e paz de espírito para os pais.</p>
+        </div>
+        <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border-b-8 border-purple-500 hover:-translate-y-2 transition-transform">
+            <div class="text-5xl mb-6">📈</div>
+            <h3 class="text-2xl font-bold mb-4">Dificuldade Adaptativa</h3>
+            <p class="text-slate-600 leading-relaxed">O sistema ajusta o nível conforme o desempenho. Nem fácil demais (entediante), nem difícil demais (frustrante). <strong>Sempre no ponto certo.</strong></p>
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-green-50 border-2 border-green-200 rounded-3xl p-6 text-center">
+            <div class="text-4xl mb-3">📖</div>
+            <p class="font-bold text-green-800">Leitura</p>
+            <p class="text-xs text-green-600 mt-1">Sílabas, palavras, frases</p>
+        </div>
+        <div class="bg-blue-50 border-2 border-blue-200 rounded-3xl p-6 text-center">
+            <div class="text-4xl mb-3">➕</div>
+            <p class="font-bold text-blue-800">Matemática</p>
+            <p class="text-xs text-blue-600 mt-1">Do básico ao 4º ano</p>
+        </div>
+        <div class="bg-purple-50 border-2 border-purple-200 rounded-3xl p-6 text-center">
+            <div class="text-4xl mb-3">🔍</div>
+            <p class="font-bold text-purple-800">Classificação</p>
+            <p class="text-xs text-purple-600 mt-1">Lógica e categorias</p>
+        </div>
+        <div class="bg-orange-50 border-2 border-orange-200 rounded-3xl p-6 text-center">
+            <div class="text-4xl mb-3">🔢</div>
+            <p class="font-bold text-orange-800">Contagem</p>
+            <p class="text-xs text-orange-600 mt-1">Numeracia e sequência</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== DEPOIMENTOS ===== -->
+<section id="depoimentos" class="py-24 bg-slate-100 px-6">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">O que os pais estão dizendo</h2>
+            <p class="text-xl text-slate-500">Resultados reais de famílias reais.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <div class="bg-white rounded-[2.5rem] p-8 shadow-xl">
+                <div class="flex gap-1 text-yellow-400 mb-4 text-xl">⭐⭐⭐⭐⭐</div>
+                <p class="text-slate-700 leading-relaxed mb-6 italic">
+                    "A Sofia não conseguia reconhecer nem as vogais. Com 2 semanas do ExpertKids, ela começou a montar sílabas sozinha. Semana passada ela leu a placa do supermercado e gritou: <strong>'Mamãe, eu li!'</strong>. Aquilo não tem preço."
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center text-lg font-bold text-pink-600">RS</div>
+                    <div>
+                        <p class="font-bold text-slate-800">Roberta S.</p>
+                        <p class="text-xs text-slate-500">Mãe da Sofia, 6 anos · São Paulo</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[2.5rem] p-8 shadow-xl ring-4 ring-blue-500 relative">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-6 py-1 rounded-full text-xs font-bold uppercase">Mais votado</div>
+                <div class="flex gap-1 text-yellow-400 mb-4 text-xl">⭐⭐⭐⭐⭐</div>
+                <p class="text-slate-700 leading-relaxed mb-6 italic">
+                    "O Miguel odiava matemática — dizia que era 'chato demais'. Hoje ele <strong>pede para jogar antes do jantar</strong>. A nota dele subiu de 6 para 9 no bimestre. Minha esposa perguntou o que eu fiz diferente. 😂"
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-lg font-bold text-blue-600">CA</div>
+                    <div>
+                        <p class="font-bold text-slate-800">Carlos A.</p>
+                        <p class="text-xs text-slate-500">Pai do Miguel, 8 anos · Curitiba</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[2.5rem] p-8 shadow-xl">
+                <div class="flex gap-1 text-yellow-400 mb-4 text-xl">⭐⭐⭐⭐⭐</div>
+                <p class="text-slate-700 leading-relaxed mb-6 italic">
+                    "Tenho 3 filhos e comprei o plano para todos. <strong>O investimento equivale a uma única aula de reforço</strong>, mas eles usam o ano todo. Cada um no seu ritmo, e eu vejo o progresso por cada estrela que ganham."
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-lg font-bold text-green-600">PL</div>
+                    <div>
+                        <p class="font-bold text-slate-800">Patrícia L.</p>
+                        <p class="text-xs text-slate-500">Mãe de 3 filhos · Belo Horizonte</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== PLANOS + CALCULADORA ===== -->
+<section id="planos" class="py-24 px-6 relative">
+    <div class="blob opacity-30 top-0 right-0"></div>
+    <div class="max-w-2xl mx-auto">
+
+        <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Escolha o plano da sua família</h2>
+            <p class="text-xl text-slate-500">Quanto mais filhos, maior o desconto. Acesso ilimitado para todos.</p>
         </div>
 
-        <div class="max-w-2xl mx-auto bg-white rounded-[3rem] p-12 border-4 border-blue-100 shadow-2xl relative overflow-hidden">
-            <div class="absolute top-0 right-0 bg-blue-600 text-white px-12 py-2 rotate-45 translate-x-10 translate-y-6 font-bold">OFERTA</div>
-            
-            <div class="flex justify-between items-start mb-8">
-                <div>
-                    <h3 class="text-3xl font-bold text-slate-900 mb-2">Plano Familiar Anual</h3>
-                    <p class="text-slate-500 font-medium italic">3 Licenças Inclusas</p>
-                </div>
-                <div class="text-right">
-                    <span class="text-slate-400 line-through block text-xl">R$ 197,00</span>
-                    <span class="text-5xl font-black text-blue-600">R$ 97,00</span>
+        <div class="bg-white rounded-[3rem] p-10 md:p-14 border-4 border-blue-100 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-blue-600 text-white px-14 py-2 rotate-45 translate-x-12 translate-y-6 font-bold text-sm">OFERTA</div>
+
+            <!-- Counter de filhos -->
+            <div class="text-center mb-10">
+                <p class="text-slate-500 font-bold mb-4 text-lg">Quantos filhos vão usar?</p>
+                <div class="flex items-center justify-center gap-6">
+                    <button id="btn-minus" class="counter-btn bg-slate-100 text-slate-600 hover:bg-slate-200 active:scale-90">−</button>
+                    <div class="text-center">
+                        <span id="child-count-display" class="text-6xl font-black text-blue-600">1</span>
+                        <p class="text-slate-400 text-sm font-bold" id="child-label">filho</p>
+                    </div>
+                    <button id="btn-plus" class="counter-btn bg-blue-600 text-white hover:bg-blue-700 active:scale-90">+</button>
                 </div>
             </div>
 
-            <div class="space-y-6 mb-12">
-                <div class="flex items-center gap-4 text-lg">
-                    <span class="bg-green-100 text-green-600 p-1 rounded-full text-sm">✔</span>
-                    <span><strong>Acesso Ilimitado</strong> a todas as Skills</span>
-                </div>
-                <div class="flex items-center gap-4 text-lg">
-                    <span class="bg-green-100 text-green-600 p-1 rounded-full text-sm">✔</span>
-                    <span>Sistema de <strong>Vidas e Conquistas</strong></span>
-                </div>
-                <div class="flex items-center gap-4 text-lg">
-                    <span class="bg-green-100 text-green-600 p-1 rounded-full text-sm">✔</span>
-                    <span>Relatórios de progresso via Estrelas</span>
+            <!-- Display de preço -->
+            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 text-center mb-8 relative">
+                <div id="discount-badge" class="hidden discount-badge absolute -top-3 -right-3 bg-green-500 text-white text-xs font-bold px-4 py-1 rounded-full"></div>
+                <p id="price-original" class="text-slate-400 line-through text-xl mb-1 h-7"></p>
+                <p id="price-current" class="text-6xl font-black text-blue-600 mb-2">R$ 97,00</p>
+                <p id="price-per-child" class="text-slate-500 font-semibold mb-1 h-5 text-sm"></p>
+                <p id="price-per-day" class="text-slate-400 text-sm">= R$ 0,27 por dia</p>
+                <div id="saving-box" class="hidden mt-4 bg-green-100 text-green-700 font-bold py-2 px-4 rounded-2xl text-sm inline-block">
+                    💰 Você economiza <span id="price-saving"></span>
                 </div>
             </div>
 
-            <a href="app.html" class="block w-full bg-blue-600 text-white text-center py-6 rounded-3xl font-bold text-2xl shadow-xl shadow-blue-200 hover:bg-blue-700 transition-all mb-4">
+            <!-- Benefícios -->
+            <div class="space-y-4 mb-10">
+                <div class="flex items-center gap-4 text-lg">
+                    <span class="bg-green-100 text-green-600 w-7 h-7 rounded-full flex items-center justify-center text-sm flex-shrink-0">✔</span>
+                    <span><strong>Acesso ilimitado</strong> a todas as habilidades</span>
+                </div>
+                <div class="flex items-center gap-4 text-lg">
+                    <span class="bg-green-100 text-green-600 w-7 h-7 rounded-full flex items-center justify-center text-sm flex-shrink-0">✔</span>
+                    <span>Exercícios infinitos, <strong>nunca se repetem</strong></span>
+                </div>
+                <div class="flex items-center gap-4 text-lg">
+                    <span class="bg-green-100 text-green-600 w-7 h-7 rounded-full flex items-center justify-center text-sm flex-shrink-0">✔</span>
+                    <span>Funciona em <strong>qualquer dispositivo</strong></span>
+                </div>
+                <div class="flex items-center gap-4 text-lg">
+                    <span class="bg-green-100 text-green-600 w-7 h-7 rounded-full flex items-center justify-center text-sm flex-shrink-0">✔</span>
+                    <span>Validade de <strong>12 meses</strong> a partir da compra</span>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <button id="btn-buy"
+                class="block w-full bg-blue-600 text-white text-center py-6 rounded-3xl font-bold text-2xl shadow-xl shadow-blue-200 hover:bg-blue-700 hover:scale-[1.02] transition-all mb-4 cursor-pointer">
                 Comprar Acesso Anual 🚀
-            </a>
-            
+            </button>
+
+            <!-- Garantia -->
+            <div class="bg-green-50 border-2 border-green-200 rounded-2xl p-5 flex items-center gap-4 mb-6">
+                <span class="text-4xl">🛡️</span>
+                <div>
+                    <p class="font-bold text-green-800">7 dias de garantia total</p>
+                    <p class="text-sm text-green-700">Se não ficar satisfeito, devolvemos cada centavo. Sem burocracia, sem perguntas.</p>
+                </div>
+            </div>
+
+            <!-- Teste grátis -->
             <div id="trial" class="bg-yellow-50 p-6 rounded-2xl border-2 border-dashed border-yellow-300 text-center">
-                <p class="font-bold text-yellow-800">Quer ver o brilho nos olhos dele antes?</p>
-                <p class="text-sm text-yellow-700 mb-4">Liberamos o sistema por 4 horas para você testar gratuitamente com seu filho.</p>
+                <p class="font-bold text-yellow-800">Quer ver o brilho nos olhos dele antes de comprar?</p>
+                <p class="text-sm text-yellow-700 mb-4">Liberamos o sistema por 4 horas gratuitamente.</p>
                 <a href="app.html?trial=true" class="bg-yellow-400 text-yellow-900 px-8 py-3 rounded-xl font-bold inline-block hover:bg-yellow-500 transition-colors">Testar Grátis Agora</a>
             </div>
         </div>
-    </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="py-24 bg-slate-100">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-4xl font-extrabold text-center mb-16">Perguntas Frequentes</h2>
-            <div class="space-y-4">
-                <details class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-200 open:ring-2 open:ring-blue-400 transition-all">
-                    <summary class="font-bold text-xl cursor-pointer list-none flex justify-between items-center">
-                        Para qual idade é indicado?
-                        <span class="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
-                    </summary>
-                    <p class="mt-4 text-slate-600">O ExpertKids foi desenhado para crianças entre 5 e 9 anos, cobrindo desde a alfabetização básica até raciocínio lógico e matemático do 4º ano.</p>
-                </details>
-
-                <details class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-200 open:ring-2 open:ring-blue-400 transition-all">
-                    <summary class="font-bold text-xl cursor-pointer list-none flex justify-between items-center">
-                        Como funcionam as 3 licenças?
-                        <span class="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
-                    </summary>
-                    <p class="mt-4 text-slate-600">Ao adquirir o plano, você pode logar em até 3 dispositivos simultâneos. Por exemplo: um Tablet, o seu celular e o computador da casa.</p>
-                </details>
-
-                <details class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-200 open:ring-2 open:ring-blue-400 transition-all">
-                    <summary class="font-bold text-xl cursor-pointer list-none flex justify-between items-center">
-                        Precisa de internet para jogar?
-                        <span class="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
-                    </summary>
-                    <p class="mt-4 text-slate-600">Apenas para o login inicial e carregamento das imagens. Uma vez aberto, o motor de geração de exercícios funciona de forma independente, ideal para viagens!</p>
-                </details>
-
-                <details class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-200 open:ring-2 open:ring-blue-400 transition-all">
-                    <summary class="font-bold text-xl cursor-pointer list-none flex justify-between items-center">
-                        O pagamento é seguro?
-                        <span class="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
-                    </summary>
-                    <p class="mt-4 text-slate-600">Sim! Utilizamos as plataformas de pagamento mais seguras do Brasil. Se não gostar, você tem 7 dias de garantia incondicional.</p>
-                </details>
+        <!-- Comparação com alternativas -->
+        <div class="mt-8 bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
+            <p class="font-bold text-center text-slate-600 mb-5 uppercase text-xs tracking-widest">ExpertKids vs. alternativas</p>
+            <div class="space-y-3 text-sm">
+                <div class="flex justify-between items-center">
+                    <span class="text-slate-600">Aula de reforço particular <span class="text-slate-400">(1 aula/mês)</span></span>
+                    <span class="font-bold text-red-500">R$ 960/ano</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-slate-600">Cursinho de leitura <span class="text-slate-400">(2x/semana)</span></span>
+                    <span class="font-bold text-red-500">R$ 1.800/ano</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-slate-600">Apostila impressa</span>
+                    <span class="font-bold text-orange-500">R$ 120/semestre</span>
+                </div>
+                <div class="flex justify-between items-center border-t-2 border-blue-100 pt-3 mt-3">
+                    <span class="text-blue-700 font-bold">ExpertKids <span class="text-blue-400">(ilimitado)</span></span>
+                    <span class="font-black text-blue-600">R$ 97/ano ✅</span>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- WhatsApp Floating -->
-    <a href="https://wa.me/5511999999999?text=Quero%20saber%20mais%20sobre%20o%20ExpertKids" class="fixed bottom-10 right-10 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all z-50 flex items-center justify-center animate-pulse" title="Tire suas dúvidas">
-        <svg class="w-10 h-10 text-white-500" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M20.52 3.48A11.78 11.78 0 0012.06 0C5.5 0 .16 5.34.16 11.91c0 2.1.55 4.15 1.6 5.96L0 24l6.27-1.64a11.9 11.9 0 005.79 1.48h.01c6.56 0 11.9-5.34 11.9-11.91 0-3.18-1.24-6.17-3.45-8.45zM12.07 21.7h-.01a9.8 9.8 0 01-4.99-1.37l-.36-.21-3.72.97.99-3.62-.23-.37a9.8 9.8 0 01-1.5-5.2c0-5.45 4.43-9.88 9.88-9.88 2.64 0 5.12 1.03 6.98 2.9a9.8 9.8 0 012.89 6.99c0 5.45-4.43 9.89-9.87 9.89zm5.43-7.41c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15s-.77.97-.94 1.17c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
-        </svg>
-    </a>
-
-    <footer class="py-12 bg-slate-900 text-slate-400 text-center px-6">
-        <div class="text-2xl font-kids text-white mb-4">ExpertKids</div>
-        <p class="mb-8">Transformando tempo de tela em tempo de aprendizado.</p>
-        <div class="flex justify-center gap-8 text-sm font-bold uppercase tracking-widest">
-            <a href="#" class="hover:text-white transition-colors">Termos</a>
-            <a href="#" class="hover:text-white transition-colors">Política</a>
-            <a href="#" class="hover:text-white transition-colors">Contato</a>
+<!-- ===== CIÊNCIA ===== -->
+<section id="ciencia" class="py-24 bg-blue-600 text-white overflow-hidden relative">
+    <div class="blob opacity-20 -bottom-40 -right-40 bg-white"></div>
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        <div>
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-8 leading-tight">
+                Por que aprender <span class="text-yellow-400">em casa</span> é vital?
+            </h2>
+            <div class="space-y-6 text-lg opacity-90 leading-relaxed">
+                <p>Estudos da <strong>Neurociência Cognitiva</strong> comprovam que o cérebro infantil possui janelas de oportunidade que se fecham após os 10 anos.</p>
+                <p>O <strong>Aprendizado Ativo</strong> — onde a criança resolve problemas, como no ExpertKids — gera conexões sinápticas <strong>3x mais fortes</strong> do que assistir vídeos passivamente.</p>
+                <p>15 minutos por dia em casa fornece o reforço que a escola sobrecarregada <strong>não consegue mais dar</strong>.</p>
+            </div>
+            <div class="mt-10 flex items-center gap-4 bg-white/10 p-6 rounded-3xl backdrop-blur-md">
+                <span class="text-4xl">🔬</span>
+                <p class="text-sm italic">Baseado em pesquisas de plasticidade cerebral e gamificação educativa da Universidade de Stanford.</p>
+            </div>
         </div>
-    </footer>
+        <div class="relative">
+            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80"
+                alt="Criança aprendendo" class="rounded-[3rem] shadow-2xl">
+        </div>
+    </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="py-24 bg-slate-100 px-6">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-extrabold text-center mb-16">Perguntas Frequentes</h2>
+        <div class="space-y-4">
+            <details class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-200 open:ring-2 open:ring-blue-400 transition-all">
+                <summary class="font-bold text-xl cursor-pointer list-none flex justify-between items-center">
+                    Para qual idade é indicado? <span class="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p class="mt-4 text-slate-600">O ExpertKids foi projetado para crianças de 5 a 9 anos, cobrindo desde a alfabetização inicial até raciocínio lógico do 4º ano.</p>
+            </details>
+            <details class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-200 open:ring-2 open:ring-blue-400 transition-all">
+                <summary class="font-bold text-xl cursor-pointer list-none flex justify-between items-center">
+                    Como funciona o plano para múltiplos filhos? <span class="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p class="mt-4 text-slate-600">Você faz um único pagamento com o valor do plano escolhido. Todos os filhos da família acessam o sistema com o mesmo e-mail de login, em dispositivos diferentes. Quanto mais filhos, maior o desconto por criança.</p>
+            </details>
+            <details class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-200 open:ring-2 open:ring-blue-400 transition-all">
+                <summary class="font-bold text-xl cursor-pointer list-none flex justify-between items-center">
+                    Precisa de internet para jogar? <span class="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p class="mt-4 text-slate-600">Apenas para o login inicial. Uma vez aberto, o motor de geração de exercícios funciona offline — ideal para viagens e locais com sinal ruim.</p>
+            </details>
+            <details class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-200 open:ring-2 open:ring-blue-400 transition-all">
+                <summary class="font-bold text-xl cursor-pointer list-none flex justify-between items-center">
+                    Como funciona a garantia? <span class="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p class="mt-4 text-slate-600">Se em até 7 dias você não estiver satisfeito, basta entrar em contato e devolvemos 100% do valor pago. Sem perguntas, sem burocracia.</p>
+            </details>
+            <details class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-200 open:ring-2 open:ring-blue-400 transition-all">
+                <summary class="font-bold text-xl cursor-pointer list-none flex justify-between items-center">
+                    O pagamento é seguro? <span class="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p class="mt-4 text-slate-600">Sim! Usamos o Mercado Pago, a maior plataforma de pagamentos da América Latina, com criptografia bancária de ponta a ponta. Aceitamos PIX, cartão de crédito e boleto.</p>
+            </details>
+            <details class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-200 open:ring-2 open:ring-blue-400 transition-all">
+                <summary class="font-bold text-xl cursor-pointer list-none flex justify-between items-center">
+                    É para escola ou para casa? <span class="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p class="mt-4 text-slate-600">Este plano é para uso doméstico. Se você representa uma escola e quer usar o ExpertKids com suas turmas, temos planos corporativos — <a href="escolas.html" class="text-blue-500 font-bold underline">veja aqui</a>.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ===== WHATSAPP ===== -->
+<a id="wa-float" href="#"
+    class="fixed bottom-10 right-10 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all z-50 flex items-center justify-center" title="Tire suas dúvidas">
+    <svg class="w-10 h-10 text-white-500" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20.52 3.48A11.78 11.78 0 0012.06 0C5.5 0 .16 5.34.16 11.91c0 2.1.55 4.15 1.6 5.96L0 24l6.27-1.64a11.9 11.9 0 005.79 1.48h.01c6.56 0 11.9-5.34 11.9-11.91 0-3.18-1.24-6.17-3.45-8.45zM12.07 21.7h-.01a9.8 9.8 0 01-4.99-1.37l-.36-.21-3.72.97.99-3.62-.23-.37a9.8 9.8 0 01-1.5-5.2c0-5.45 4.43-9.88 9.88-9.88 2.64 0 5.12 1.03 6.98 2.9a9.8 9.8 0 012.89 6.99c0 5.45-4.43 9.89-9.87 9.89zm5.43-7.41c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15s-.77.97-.94 1.17c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+    </svg>
+</a>
+
+<!-- ===== MODAL DE PAGAMENTO ===== -->
+<div id="payment-modal" class="fixed inset-0 z-[200] hidden items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm">
+    <div class="bg-white w-full max-w-md rounded-[2.5rem] shadow-2xl overflow-hidden">
+
+        <!-- Etapa 1: Email -->
+        <div id="step-email" class="p-10 text-center">
+            <div class="text-5xl mb-4">🔐</div>
+            <h3 class="text-2xl font-extrabold mb-1">Quase lá!</h3>
+            <div id="modal-plan-summary" class="bg-blue-50 rounded-2xl px-5 py-3 mb-4 text-blue-700 font-bold text-sm"></div>
+            <p class="text-slate-500 mb-5 text-sm">Informe o e-mail que ficará vinculado ao seu acesso.</p>
+            <input type="email" id="pay-email" placeholder="seu@email.com"
+                class="w-full px-5 py-4 rounded-xl border-2 border-slate-200 focus:border-blue-400 outline-none text-lg font-bold mb-4">
+            <button id="btn-generate-pix" class="w-full bg-blue-600 text-white py-5 rounded-2xl font-bold text-xl hover:bg-blue-700 transition-all">
+                Ir para o Pagamento 🛒
+            </button>
+            <button id="btn-modal-close" class="mt-4 text-sm text-slate-400 hover:text-slate-600 transition-colors">Cancelar</button>
+        </div>
+
+        <!-- Etapa 2: QR Code PIX + Checkout -->
+        <div id="step-pix" class="p-6 text-center hidden">
+            <h3 class="text-xl font-extrabold mb-1">Pedido criado! ✅</h3>
+            <p class="text-slate-500 text-sm mb-4">Pague pelo QR Code abaixo ou escolha outra forma.</p>
+
+            <!-- QR Code -->
+            <div id="pix-qr-section" class="hidden mb-4">
+                <img id="pix-qrcode-img" src="" alt="QR Code PIX"
+                    class="w-44 h-44 mx-auto rounded-2xl border-4 border-blue-100 mb-3 object-contain">
+                <div class="flex gap-2 mb-1">
+                    <input id="pix-key" type="text" readonly
+                        class="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-mono text-slate-700 truncate">
+                    <button id="btn-copy-pix"
+                        class="bg-blue-600 text-white px-4 py-2 rounded-xl font-bold text-xs hover:bg-blue-700 transition-all whitespace-nowrap">
+                        Copiar
+                    </button>
+                </div>
+                <p class="text-xs text-slate-400 mb-4">PIX aprovado na hora ⚡</p>
+            </div>
+
+            <!-- Separador -->
+            <div id="pix-divider" class="hidden flex items-center gap-3 my-3">
+                <div class="flex-1 h-px bg-slate-200"></div>
+                <span class="text-xs text-slate-400 font-bold">ou prefere outro jeito?</span>
+                <div class="flex-1 h-px bg-slate-200"></div>
+            </div>
+
+            <!-- Botão Checkout Pro -->
+            <a id="checkout-link" href="#" target="_blank"
+                class="flex items-center justify-center gap-2 w-full border-2 border-blue-600 text-blue-600 py-3 rounded-2xl font-bold text-sm hover:bg-blue-50 transition-all mb-4">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+                Pagar com cartão ou boleto ↗
+            </a>
+
+            <!-- Polling -->
+            <div class="bg-yellow-50 border border-yellow-200 rounded-2xl p-3 flex items-center gap-3">
+                <div class="w-4 h-4 rounded-full border-4 border-yellow-400 border-t-transparent animate-spin flex-shrink-0"></div>
+                <p class="text-xs text-yellow-700 font-bold text-left">Aguardando confirmação do pagamento...</p>
+            </div>
+        </div>
+
+        <!-- Etapa 3: Sucesso -->
+        <div id="step-success" class="p-10 text-center hidden">
+            <div class="text-6xl mb-4 animate-bounce">🎉</div>
+            <h3 class="text-2xl font-extrabold text-green-600 mb-2">Pagamento aprovado!</h3>
+            <p class="text-slate-500 mb-8">Seu acesso anual está ativo. Agora é só entrar e começar a aventura!</p>
+            <a id="btn-go-to-app" href="app.html"
+                class="block w-full bg-green-500 text-white py-5 rounded-2xl font-bold text-xl hover:bg-green-600 transition-all shadow-lg shadow-green-200">
+                Entrar no App 🚀
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="py-12 bg-slate-900 text-slate-400 text-center px-6">
+    <div class="text-2xl font-kids text-white mb-2">🌟 ExpertKids</div>
+    <p class="mb-2 text-sm">Transformando tempo de tela em tempo de aprendizado.</p>
+    <p class="text-xs text-slate-500 mb-8">© 2025 ExpertKids · Todos os direitos reservados</p>
+    <div class="flex justify-center flex-wrap gap-8 text-sm font-bold uppercase tracking-widest">
+        <a href="termos.html" class="hover:text-white transition-colors">Termos de Uso</a>
+        <a href="privacidade.html" class="hover:text-white transition-colors">Privacidade</a>
+        <a href="escolas.html" class="hover:text-white transition-colors">Para Escolas</a>
+        <a id="footer-wa" href="#" class="hover:text-white transition-colors">Contato</a>
+    </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/payment.js"></script>
+<script>
+    // Aplica WhatsApp do CONFIG em todos os links da página
+    document.addEventListener('DOMContentLoaded', () => {
+        const waUrl = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(CONFIG.WHATSAPP_MSG_PAIS)}`;
+        ['wa-float','footer-wa'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.href = waUrl;
+        });
+    });
+</script>
+<script>
+    // ===== CALCULADORA DE FILHOS =====
+    const PRICES    = [97, 167, 227, 277, 317];
+    const ORIGINALS = [97, 194, 291, 388, 485];
+    let childCount  = 1;
+
+    function fmtBRL(v) {
+        return 'R$ ' + v.toLocaleString('pt-BR') + ',00';
+    }
+
+    function updatePriceDisplay() {
+        const price    = PRICES[childCount - 1];
+        const original = ORIGINALS[childCount - 1];
+        const saving   = original - price;
+        const perChild = (price / childCount).toFixed(2).replace('.', ',');
+        const perDay   = (price / 365).toFixed(2).replace('.', ',');
+
+        document.getElementById('child-count-display').textContent = childCount;
+        document.getElementById('child-label').textContent = childCount === 1 ? 'filho' : 'filhos';
+
+        document.getElementById('price-current').textContent = fmtBRL(price);
+        document.getElementById('price-per-day').textContent = '= R$ ' + perDay + ' por dia';
+
+        const origEl   = document.getElementById('price-original');
+        const perChEl  = document.getElementById('price-per-child');
+        const savBox   = document.getElementById('saving-box');
+        const savEl    = document.getElementById('price-saving');
+        const badge    = document.getElementById('discount-badge');
+
+        if (childCount > 1) {
+            origEl.textContent  = 'De ' + fmtBRL(original);
+            perChEl.textContent = fmtBRL(price / childCount * 100 | 0 / 100).replace(',00','') + ' R$ ' + perChild + ' por criança/ano';
+            perChEl.textContent = 'R$ ' + perChild + ' por criança/ano';
+            savEl.textContent   = fmtBRL(saving);
+            savBox.classList.remove('hidden');
+            const pct = Math.round(saving / original * 100);
+            badge.textContent = pct + '% OFF';
+            badge.classList.remove('hidden');
+            badge.classList.add('discount-badge');
+        } else {
+            origEl.textContent  = '';
+            perChEl.textContent = '';
+            savBox.classList.add('hidden');
+            badge.classList.add('hidden');
+        }
+
+        document.getElementById('btn-minus').disabled = childCount <= 1;
+        document.getElementById('btn-minus').classList.toggle('opacity-30', childCount <= 1);
+        document.getElementById('btn-plus').disabled  = childCount >= 5;
+        document.getElementById('btn-plus').classList.toggle('opacity-30', childCount >= 5);
+    }
+
+    document.getElementById('btn-minus').addEventListener('click', () => {
+        if (childCount > 1) { childCount--; updatePriceDisplay(); }
+    });
+    document.getElementById('btn-plus').addEventListener('click', () => {
+        if (childCount < 5) { childCount++; updatePriceDisplay(); }
+    });
+
+    updatePriceDisplay();
+
+    // ===== MODAL =====
+    const modal       = document.getElementById('payment-modal');
+    const stepEmail   = document.getElementById('step-email');
+    const stepPix     = document.getElementById('step-pix');
+    const stepSuccess = document.getElementById('step-success');
+    let pollingTimer  = null;
+
+    function showStep(step) {
+        [stepEmail, stepPix, stepSuccess].forEach(s => s.classList.add('hidden'));
+        step.classList.remove('hidden');
+    }
+
+    document.getElementById('btn-buy').addEventListener('click', () => {
+        const price = PRICES[childCount - 1];
+        const label = childCount === 1 ? '1 filho' : childCount + ' filhos';
+        document.getElementById('modal-plan-summary').textContent =
+            '🎯 Plano ' + label + ' · ' + fmtBRL(price) + '/ano';
+        showStep(stepEmail);
+        modal.style.display = 'flex';
+    });
+
+    document.getElementById('btn-modal-close').addEventListener('click', () => {
+        modal.style.display = 'none';
+        if (pollingTimer) clearInterval(pollingTimer);
+    });
+
+    document.getElementById('btn-generate-pix').addEventListener('click', async () => {
+        const email = document.getElementById('pay-email').value.trim();
+        if (!email || !email.includes('@')) {
+            alert('Informe um e-mail válido.');
+            return;
+        }
+
+        const btn = document.getElementById('btn-generate-pix');
+        btn.disabled = true;
+        btn.textContent = 'Gerando pedido...';
+
+        const price       = PRICES[childCount - 1];
+        const label       = childCount === 1 ? '1 filho' : childCount + ' filhos';
+        const description = 'ExpertKids - Acesso Anual (' + label + ')';
+
+        const result = await PaymentProvider.createPayment(email, price, description);
+
+        if (result.error || (!result.pix_qr_code && !result.checkout_url)) {
+            alert('Erro ao gerar o pedido. Tente novamente.');
+            btn.disabled = false;
+            btn.textContent = 'Ir para o Pagamento 🛒';
+            return;
+        }
+
+        // QR Code PIX
+        const qrSection = document.getElementById('pix-qr-section');
+        const divider   = document.getElementById('pix-divider');
+        if (result.pix_qr_code_base64) {
+            document.getElementById('pix-qrcode-img').src = 'data:image/png;base64,' + result.pix_qr_code_base64;
+            document.getElementById('pix-key').value = result.pix_qr_code;
+            qrSection.classList.remove('hidden');
+        }
+
+        // Botão Checkout Pro
+        const checkoutLink = document.getElementById('checkout-link');
+        if (result.checkout_url) {
+            checkoutLink.href = result.checkout_url;
+            checkoutLink.classList.remove('hidden');
+            if (result.pix_qr_code_base64) divider.classList.remove('hidden');
+        } else {
+            checkoutLink.classList.add('hidden');
+        }
+
+        showStep(stepPix);
+
+        pollingTimer = PaymentProvider.startPaymentPolling(email, () => {
+            localStorage.setItem('expertkids_user_email', email);
+            if (pollingTimer) clearInterval(pollingTimer);
+            showStep(stepSuccess);
+            document.getElementById('btn-go-to-app').href =
+                'app.html?email=' + encodeURIComponent(email);
+        });
+    });
+
+    document.getElementById('btn-copy-pix').addEventListener('click', () => {
+        const key = document.getElementById('pix-key').value;
+        navigator.clipboard.writeText(key).then(() => {
+            const btn = document.getElementById('btn-copy-pix');
+            btn.textContent = 'Copiado!';
+            setTimeout(() => { btn.textContent = 'Copiar'; }, 2000);
+        });
+    });
+</script>
 
 </body>
 </html>

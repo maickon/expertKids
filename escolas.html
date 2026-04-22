@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpertKids para Escolas | Tecnologia educativa que transforma turmas</title>
+
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="canonical" href="https://expertkids.space/escolas.html">
+
+    <meta name="description" content="Leve o ExpertKids para sua escola. Exercícios adaptativos de leitura e matemática alinhados à BNCC. Planos por turma ou por escola. Solicite uma demonstração gratuita.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://expertkids.space/escolas.html">
+    <meta property="og:title" content="ExpertKids para Escolas | Tecnologia que transforma turmas">
+    <meta property="og:description" content="Plataforma educativa com exercícios infinitos de leitura e matemática. Alinhado à BNCC. Planos a partir de R$ 297/turma/ano.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-kids { font-family: 'Fredoka', sans-serif; }
+        .blob {
+            position: absolute; width: 500px; height: 500px;
+            background: linear-gradient(135deg, rgba(16,185,129,0.15) 0%, rgba(59,130,246,0.15) 100%);
+            filter: blur(80px); border-radius: 50%; z-index: -1;
+        }
+        details summary::-webkit-details-marker { display: none; }
+        .plan-card { transition: transform .2s, box-shadow .2s; }
+        .plan-card:hover { transform: translateY(-6px); box-shadow: 0 24px 60px -12px rgba(0,0,0,.15); }
+    </style>
+</head>
+<body class="bg-slate-50 overflow-x-hidden">
+
+<!-- ===== NAV ===== -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-emerald-100">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-kids font-bold text-blue-600 flex items-center gap-2">
+            <span class="text-3xl">🌟</span> ExpertKids
+        </a>
+        <div class="hidden md:flex gap-8 font-bold text-slate-600">
+            <a href="#como-funciona" class="hover:text-emerald-600 transition-colors">Como funciona</a>
+            <a href="#planos" class="hover:text-emerald-600 transition-colors">Planos</a>
+            <a href="#contato" class="hover:text-emerald-600 transition-colors">Contato</a>
+            <a href="index.html" class="hover:text-blue-600 transition-colors text-blue-500">Para pais →</a>
+        </div>
+        <a href="#contato" class="bg-emerald-600 text-white px-6 py-3 rounded-2xl font-bold hover:bg-emerald-700 transition-all shadow-lg shadow-emerald-200 text-sm">
+            Solicitar demonstração
+        </a>
+    </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="relative pt-32 pb-20 px-6 overflow-hidden">
+    <div class="blob -top-20 -left-20"></div>
+    <div class="blob -bottom-40 -right-20 opacity-50"></div>
+    <div class="max-w-5xl mx-auto text-center">
+        <span class="bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-6 inline-block">
+            🏫 Solução para Escolas e Redes de Ensino
+        </span>
+        <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 leading-[1.1] mb-6">
+            Mais de 12.000 crianças<br/>
+            <span class="text-emerald-600">já aprendem com o ExpertKids.</span><br/>
+            <span class="text-blue-600">Leve isso para sua escola.</span>
+        </h1>
+        <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-3xl mx-auto">
+            Plataforma de exercícios adaptativos de <strong>leitura, matemática e lógica</strong> para crianças de 5 a 9 anos. Alinhado à BNCC, sem instalação e com custo menor que R$ 1 por aluno por mês.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#contato" class="bg-emerald-600 text-white px-10 py-5 rounded-3xl font-bold text-xl shadow-2xl shadow-emerald-200 hover:scale-105 transition-all text-center">
+                Solicitar Demo Gratuita 🎓
+            </a>
+            <a href="#planos" class="bg-white border-2 border-slate-200 text-slate-700 px-10 py-5 rounded-3xl font-bold text-xl hover:border-emerald-300 transition-all text-center">
+                Ver Planos e Preços
+            </a>
+        </div>
+        <p class="mt-4 text-sm text-slate-400">Sem compromisso · Demonstração gratuita para a direção · Resposta em até 24h</p>
+    </div>
+</header>
+
+<!-- ===== NÚMEROS ===== -->
+<section class="bg-emerald-600 py-8 px-6">
+    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-center">
+        <div>
+            <p class="text-3xl font-black">12.400+</p>
+            <p class="text-emerald-200 text-sm font-bold">Alunos ativos</p>
+        </div>
+        <div>
+            <p class="text-3xl font-black">BNCC</p>
+            <p class="text-emerald-200 text-sm font-bold">Alinhado</p>
+        </div>
+        <div>
+            <p class="text-3xl font-black">&lt; R$ 1</p>
+            <p class="text-emerald-200 text-sm font-bold">Por aluno/mês</p>
+        </div>
+        <div>
+            <p class="text-3xl font-black">Zero</p>
+            <p class="text-emerald-200 text-sm font-bold">Instalação necessária</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== COMO FUNCIONA PARA ESCOLAS ===== -->
+<section id="como-funciona" class="py-24 max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Como funciona na prática?</h2>
+        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Do contrato à primeira aula em menos de 24 horas.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="text-center">
+            <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center text-3xl mx-auto mb-6">1️⃣</div>
+            <h3 class="text-xl font-bold mb-3">Escola recebe o acesso</h3>
+            <p class="text-slate-600 leading-relaxed">Após a contratação, a escola recebe um e-mail de acesso. Sem instalação, sem configuração complexa. Funciona em qualquer tablet, computador ou celular.</p>
+        </div>
+        <div class="text-center">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-3xl mx-auto mb-6">2️⃣</div>
+            <h3 class="text-xl font-bold mb-3">Alunos usam em sala ou em casa</h3>
+            <p class="text-slate-600 leading-relaxed">O professor indica o ExpertKids como atividade de reforço. Os alunos acessam no laboratório de informática, sala de leitura ou nos dispositivos pessoais em casa.</p>
+        </div>
+        <div class="text-center">
+            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center text-3xl mx-auto mb-6">3️⃣</div>
+            <h3 class="text-xl font-bold mb-3">Progresso visível e motivador</h3>
+            <p class="text-slate-600 leading-relaxed">O sistema de estrelas e conquistas mantém os alunos engajados. O professor consegue identificar quem está praticando pelo número de estrelas acumuladas.</p>
+        </div>
+    </div>
+
+    <!-- Features grid -->
+    <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-3xl p-8 shadow-md border border-slate-100 flex gap-5">
+            <div class="text-4xl flex-shrink-0">📚</div>
+            <div>
+                <h4 class="font-bold text-lg mb-2">Alinhado à BNCC</h4>
+                <p class="text-slate-600 text-sm leading-relaxed">As habilidades de leitura (EF01LP, EF02LP) e matemática (EF01MA, EF02MA) cobrem as competências previstas para o 1º ao 4º ano do Ensino Fundamental.</p>
+            </div>
+        </div>
+        <div class="bg-white rounded-3xl p-8 shadow-md border border-slate-100 flex gap-5">
+            <div class="text-4xl flex-shrink-0">♾️</div>
+            <div>
+                <h4 class="font-bold text-lg mb-2">Exercícios que nunca se repetem</h4>
+                <p class="text-slate-600 text-sm leading-relaxed">O motor de geração cria combinações únicas a cada sessão. O aluno aprende a lógica — não memoriza a resposta.</p>
+            </div>
+        </div>
+        <div class="bg-white rounded-3xl p-8 shadow-md border border-slate-100 flex gap-5">
+            <div class="text-4xl flex-shrink-0">📱</div>
+            <div>
+                <h4 class="font-bold text-lg mb-2">Funciona em qualquer dispositivo</h4>
+                <p class="text-slate-600 text-sm leading-relaxed">Tablet, computador, celular Android ou iOS. Sem aplicativo para baixar. Abre no navegador e funciona offline após o carregamento.</p>
+            </div>
+        </div>
+        <div class="bg-white rounded-3xl p-8 shadow-md border border-slate-100 flex gap-5">
+            <div class="text-4xl flex-shrink-0">🛡️</div>
+            <div>
+                <h4 class="font-bold text-lg mb-2">Ambiente seguro e focado</h4>
+                <p class="text-slate-600 text-sm leading-relaxed">Zero anúncios, zero links externos, zero distração. Os alunos permanecem 100% focados na atividade — sem riscos de acesso a conteúdo inapropriado.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== BNCC ===== -->
+<section class="py-16 bg-blue-600 text-white px-6">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+                Planejado para <span class="text-yellow-400">complementar</span> o que a escola já faz.
+            </h2>
+            <p class="text-lg opacity-90 mb-6 leading-relaxed">
+                O ExpertKids não substitui o professor — ele potencializa. Use como atividade de reforço, tarefa de casa ou para preencher 15 minutos de tempo livre com aprendizado ativo.
+            </p>
+            <ul class="space-y-3 text-lg">
+                <li class="flex items-center gap-3"><span class="text-yellow-400 font-bold">✔</span> Leitura: sílabas, palavras, frases e interpretação</li>
+                <li class="flex items-center gap-3"><span class="text-yellow-400 font-bold">✔</span> Matemática: adição, subtração, multiplicação e lógica</li>
+                <li class="flex items-center gap-3"><span class="text-yellow-400 font-bold">✔</span> Classificação e raciocínio sequencial</li>
+                <li class="flex items-center gap-3"><span class="text-yellow-400 font-bold">✔</span> Contagem e numeracia</li>
+            </ul>
+        </div>
+        <div class="bg-white/10 rounded-3xl p-8 backdrop-blur-md">
+            <p class="text-sm font-bold uppercase tracking-widest text-blue-200 mb-4">Competências BNCC cobertas</p>
+            <div class="space-y-3">
+                <div class="bg-white/10 rounded-2xl px-4 py-3 flex justify-between items-center">
+                    <span class="font-bold">Língua Portuguesa 1º-2º ano</span>
+                    <span class="bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full">✔ Coberto</span>
+                </div>
+                <div class="bg-white/10 rounded-2xl px-4 py-3 flex justify-between items-center">
+                    <span class="font-bold">Matemática 1º-4º ano</span>
+                    <span class="bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full">✔ Coberto</span>
+                </div>
+                <div class="bg-white/10 rounded-2xl px-4 py-3 flex justify-between items-center">
+                    <span class="font-bold">Raciocínio lógico</span>
+                    <span class="bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full">✔ Coberto</span>
+                </div>
+                <div class="bg-white/10 rounded-2xl px-4 py-3 flex justify-between items-center">
+                    <span class="font-bold">Literacia numérica</span>
+                    <span class="bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full">✔ Coberto</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PLANOS ===== -->
+<section id="planos" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Planos para Escolas</h2>
+            <p class="text-xl text-slate-500 max-w-2xl mx-auto">Valores anuais. Quanto maior a escola, menor o custo por aluno.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-10">
+
+            <!-- Plano Turma -->
+            <div class="plan-card bg-white rounded-[2.5rem] p-10 border-2 border-slate-200 shadow-lg">
+                <div class="text-4xl mb-4">🏫</div>
+                <h3 class="text-2xl font-bold mb-2">Turma</h3>
+                <p class="text-slate-500 text-sm mb-6">Ideal para professores que querem testar antes de apresentar para a direção.</p>
+                <div class="mb-6">
+                    <p class="text-slate-400 text-sm">Até 30 alunos</p>
+                    <p class="text-5xl font-black text-slate-800 my-2">R$ 297<span class="text-xl font-normal text-slate-400">/ano</span></p>
+                    <p class="text-emerald-600 font-bold text-sm">≈ R$ 9,90/aluno/ano</p>
+                </div>
+                <ul class="space-y-3 text-sm text-slate-600 mb-8">
+                    <li class="flex gap-2"><span class="text-emerald-500">✔</span> 1 acesso compartilhado</li>
+                    <li class="flex gap-2"><span class="text-emerald-500">✔</span> Todas as habilidades desbloqueadas</li>
+                    <li class="flex gap-2"><span class="text-emerald-500">✔</span> Funciona em qualquer dispositivo</li>
+                    <li class="flex gap-2"><span class="text-slate-300">✗</span> Suporte prioritário</li>
+                </ul>
+                <a href="#contato" class="block w-full border-2 border-emerald-600 text-emerald-600 text-center py-4 rounded-2xl font-bold hover:bg-emerald-50 transition-all">
+                    Solicitar este plano
+                </a>
+            </div>
+
+            <!-- Plano Escola — destaque -->
+            <div class="plan-card bg-emerald-600 rounded-[2.5rem] p-10 shadow-2xl relative text-white">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-yellow-900 px-6 py-1 rounded-full text-xs font-bold uppercase whitespace-nowrap">Mais escolhido</div>
+                <div class="text-4xl mb-4">🏢</div>
+                <h3 class="text-2xl font-bold mb-2">Escola</h3>
+                <p class="text-emerald-200 text-sm mb-6">Para escolas que querem beneficiar todas as turmas dos anos iniciais.</p>
+                <div class="mb-6">
+                    <p class="text-emerald-300 text-sm">Até 150 alunos (5 turmas)</p>
+                    <p class="text-5xl font-black my-2">R$ 997<span class="text-xl font-normal text-emerald-300">/ano</span></p>
+                    <p class="text-yellow-300 font-bold text-sm">≈ R$ 6,65/aluno/ano</p>
+                </div>
+                <ul class="space-y-3 text-sm text-emerald-100 mb-8">
+                    <li class="flex gap-2"><span class="text-yellow-300">✔</span> Acesso para toda a escola</li>
+                    <li class="flex gap-2"><span class="text-yellow-300">✔</span> Todas as habilidades desbloqueadas</li>
+                    <li class="flex gap-2"><span class="text-yellow-300">✔</span> Funciona em qualquer dispositivo</li>
+                    <li class="flex gap-2"><span class="text-yellow-300">✔</span> Suporte prioritário via WhatsApp</li>
+                </ul>
+                <a href="#contato" class="block w-full bg-white text-emerald-700 text-center py-4 rounded-2xl font-bold hover:bg-emerald-50 transition-all shadow-lg">
+                    Solicitar este plano
+                </a>
+            </div>
+
+            <!-- Plano Rede -->
+            <div class="plan-card bg-white rounded-[2.5rem] p-10 border-2 border-slate-200 shadow-lg">
+                <div class="text-4xl mb-4">🌐</div>
+                <h3 class="text-2xl font-bold mb-2">Rede / Custom</h3>
+                <p class="text-slate-500 text-sm mb-6">Para redes de ensino, colégios maiores ou projetos com necessidades específicas.</p>
+                <div class="mb-6">
+                    <p class="text-slate-400 text-sm">Alunos ilimitados</p>
+                    <p class="text-5xl font-black text-slate-800 my-2">Sob<span class="text-xl font-normal text-slate-400"> consulta</span></p>
+                    <p class="text-emerald-600 font-bold text-sm">Melhor custo/aluno</p>
+                </div>
+                <ul class="space-y-3 text-sm text-slate-600 mb-8">
+                    <li class="flex gap-2"><span class="text-emerald-500">✔</span> Alunos ilimitados</li>
+                    <li class="flex gap-2"><span class="text-emerald-500">✔</span> Todas as habilidades desbloqueadas</li>
+                    <li class="flex gap-2"><span class="text-emerald-500">✔</span> Suporte dedicado</li>
+                    <li class="flex gap-2"><span class="text-emerald-500">✔</span> Apresentação para a equipe pedagógica</li>
+                </ul>
+                <a href="#contato" class="block w-full border-2 border-emerald-600 text-emerald-600 text-center py-4 rounded-2xl font-bold hover:bg-emerald-50 transition-all">
+                    Falar com consultor
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Custo por aluno comparação -->
+        <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 max-w-2xl mx-auto">
+            <p class="font-bold text-center text-slate-600 mb-5 uppercase text-xs tracking-widest">Custo real por aluno</p>
+            <div class="space-y-3 text-sm">
+                <div class="flex justify-between items-center">
+                    <span class="text-slate-600">Apostila impressa por aluno</span>
+                    <span class="font-bold text-red-500">R$ 40–80/semestre</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-slate-600">Plataforma concorrente (média)</span>
+                    <span class="font-bold text-orange-500">R$ 30–60/aluno/ano</span>
+                </div>
+                <div class="flex justify-between items-center border-t-2 border-emerald-100 pt-3 mt-3">
+                    <span class="text-emerald-700 font-bold">ExpertKids (Plano Escola)</span>
+                    <span class="font-black text-emerald-600">R$ 6,65/aluno/ano ✅</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== DEPOIMENTO ESCOLA ===== -->
+<section class="py-16 bg-slate-100 px-6">
+    <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-[2.5rem] p-10 shadow-xl text-center">
+            <div class="flex gap-1 text-yellow-400 justify-center mb-6 text-2xl">⭐⭐⭐⭐⭐</div>
+            <p class="text-xl text-slate-700 leading-relaxed italic mb-8 max-w-2xl mx-auto">
+                "Implementamos o ExpertKids no laboratório de informática para o reforço de leitura. Em 6 semanas, <strong>a turma do 2º ano reduziu em 40% as dificuldades de reconhecimento silábico</strong> identificadas no diagnóstico inicial. O custo foi irrisório comparado ao resultado."
+            </p>
+            <div class="flex items-center justify-center gap-4">
+                <div class="w-14 h-14 rounded-full bg-emerald-100 flex items-center justify-center text-xl font-bold text-emerald-700">MA</div>
+                <div class="text-left">
+                    <p class="font-bold text-slate-800">Márcia A.</p>
+                    <p class="text-sm text-slate-500">Coordenadora Pedagógica · Escola Municipal · Interior de SP</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTATO ===== -->
+<section id="contato" class="py-24 px-6">
+    <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Vamos conversar?</h2>
+            <p class="text-xl text-slate-500">Escolha como prefere entrar em contato. Respondemos em até 24 horas.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <!-- WhatsApp -->
+            <a id="wa-escola-btn" href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Tenho%20interesse%20no%20ExpertKids%20para%20minha%20escola.%20Podemos%20conversar%3F"
+                target="_blank"
+                class="bg-[#25D366] text-white rounded-3xl p-8 flex items-center gap-5 shadow-xl hover:scale-[1.02] transition-all">
+                <svg class="w-12 h-12 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.52 3.48A11.78 11.78 0 0012.06 0C5.5 0 .16 5.34.16 11.91c0 2.1.55 4.15 1.6 5.96L0 24l6.27-1.64a11.9 11.9 0 005.79 1.48h.01c6.56 0 11.9-5.34 11.9-11.91 0-3.18-1.24-6.17-3.45-8.45zM12.07 21.7h-.01a9.8 9.8 0 01-4.99-1.37l-.36-.21-3.72.97.99-3.62-.23-.37a9.8 9.8 0 01-1.5-5.2c0-5.45 4.43-9.88 9.88-9.88 2.64 0 5.12 1.03 6.98 2.9a9.8 9.8 0 012.89 6.99c0 5.45-4.43 9.89-9.87 9.89zm5.43-7.41c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15s-.77.97-.94 1.17c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+                </svg>
+                <div>
+                    <p class="font-bold text-lg">WhatsApp</p>
+                    <p class="text-green-100 text-sm">Resposta rápida · Mais direto</p>
+                </div>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:escolas@expertkids.space?subject=Interesse%20no%20ExpertKids%20para%20Escola"
+                class="bg-blue-600 text-white rounded-3xl p-8 flex items-center gap-5 shadow-xl hover:scale-[1.02] transition-all">
+                <svg class="w-12 h-12 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <div>
+                    <p class="font-bold text-lg">E-mail</p>
+                    <p class="text-blue-200 text-sm">escolas@expertkids.space</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Formulário -->
+        <div class="bg-white rounded-[2.5rem] p-10 shadow-xl border border-slate-100">
+            <h3 class="text-2xl font-bold mb-2 text-center">Ou preencha o formulário</h3>
+            <p class="text-slate-500 text-center mb-8 text-sm">Entraremos em contato para agendar uma demonstração gratuita.</p>
+
+            <form id="contact-form" class="space-y-5">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 mb-1 uppercase">Seu nome</label>
+                        <input type="text" name="nome" placeholder="Maria Silva" required
+                            class="w-full px-4 py-3 rounded-xl border-2 border-slate-100 focus:border-emerald-400 outline-none transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 mb-1 uppercase">Cargo</label>
+                        <input type="text" name="cargo" placeholder="Diretora, Coordenadora..." required
+                            class="w-full px-4 py-3 rounded-xl border-2 border-slate-100 focus:border-emerald-400 outline-none transition-all">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 mb-1 uppercase">Nome da escola</label>
+                    <input type="text" name="escola" placeholder="Escola Municipal / Colégio..." required
+                        class="w-full px-4 py-3 rounded-xl border-2 border-slate-100 focus:border-emerald-400 outline-none transition-all">
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 mb-1 uppercase">E-mail</label>
+                        <input type="email" name="email" placeholder="seu@escola.com.br" required
+                            class="w-full px-4 py-3 rounded-xl border-2 border-slate-100 focus:border-emerald-400 outline-none transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 mb-1 uppercase">WhatsApp</label>
+                        <input type="tel" name="telefone" placeholder="(11) 99999-9999"
+                            class="w-full px-4 py-3 rounded-xl border-2 border-slate-100 focus:border-emerald-400 outline-none transition-all">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 mb-1 uppercase">Quantidade de alunos</label>
+                    <select name="alunos" class="w-full px-4 py-3 rounded-xl border-2 border-slate-100 focus:border-emerald-400 outline-none transition-all bg-white">
+                        <option>Até 30 alunos (1 turma)</option>
+                        <option>31 a 150 alunos (2–5 turmas)</option>
+                        <option>151 a 450 alunos (6–15 turmas)</option>
+                        <option>Mais de 450 alunos / Rede de ensino</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 mb-1 uppercase">Mensagem (opcional)</label>
+                    <textarea name="mensagem" rows="3" placeholder="Conte um pouco sobre sua escola e como podemos ajudar..."
+                        class="w-full px-4 py-3 rounded-xl border-2 border-slate-100 focus:border-emerald-400 outline-none transition-all resize-none"></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full bg-emerald-600 text-white py-5 rounded-2xl font-bold text-xl hover:bg-emerald-700 transition-all shadow-lg shadow-emerald-200">
+                    Solicitar Demonstração Gratuita 🎓
+                </button>
+                <p class="text-xs text-slate-400 text-center">Você será redirecionado para o WhatsApp para finalizar o contato.</p>
+            </form>
+
+            <div id="form-success" class="hidden text-center py-8">
+                <div class="text-5xl mb-4">🎉</div>
+                <h3 class="text-xl font-bold text-emerald-700 mb-2">Mensagem enviada!</h3>
+                <p class="text-slate-500">Entraremos em contato em até 24 horas para agendar a demonstração.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FAQ ESCOLAS ===== -->
+<section class="py-20 bg-slate-100 px-6">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-extrabold text-center mb-12">Dúvidas frequentes das escolas</h2>
+        <div class="space-y-4">
+            <details class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-200 open:ring-2 open:ring-emerald-400 transition-all">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                    Precisa instalar algum software? <span class="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p class="mt-4 text-slate-600">Não. O ExpertKids funciona diretamente no navegador de qualquer dispositivo. Basta acessar o link e fazer login com o e-mail cadastrado.</p>
+            </details>
+            <details class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-200 open:ring-2 open:ring-emerald-400 transition-all">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                    Precisa de internet na sala de aula? <span class="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p class="mt-4 text-slate-600">Apenas para o carregamento inicial. Após abrir o sistema, ele funciona offline. Ideal para escolas com internet instável ou para uso em casa pelos alunos.</p>
+            </details>
+            <details class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-200 open:ring-2 open:ring-emerald-400 transition-all">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                    Como é feito o pagamento institucional? <span class="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p class="mt-4 text-slate-600">Aceitamos PIX, boleto bancário (para emissão de nota fiscal) e cartão de crédito. Para escolas públicas que precisam de processo licitatório, entre em contato para verificar as opções.</p>
+            </details>
+            <details class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-200 open:ring-2 open:ring-emerald-400 transition-all">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                    É emitida nota fiscal? <span class="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p class="mt-4 text-slate-600">Sim. Para contratos institucionais emitimos nota fiscal eletrônica de serviço. Entre em contato informando os dados da sua escola para gerarmos a proposta formal.</p>
+            </details>
+            <details class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-200 open:ring-2 open:ring-emerald-400 transition-all">
+                <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                    Posso fazer uma demonstração antes de contratar? <span class="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p class="mt-4 text-slate-600">Sim! Oferecemos acesso gratuito de demonstração para a direção e coordenação pedagógica avaliarem a plataforma antes de qualquer compromisso. Preencha o formulário acima e entraremos em contato.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="py-12 bg-slate-900 text-slate-400 text-center px-6">
+    <div class="text-2xl font-kids text-white mb-2">🌟 ExpertKids</div>
+    <p class="mb-2 text-sm">Transformando tempo de tela em tempo de aprendizado.</p>
+    <p class="text-xs text-slate-500 mb-8">© 2025 ExpertKids · Todos os direitos reservados</p>
+    <div class="flex justify-center flex-wrap gap-8 text-sm font-bold uppercase tracking-widest">
+        <a href="index.html" class="hover:text-white transition-colors">Para Pais</a>
+        <a href="termos.html" class="hover:text-white transition-colors">Termos de Uso</a>
+        <a href="privacidade.html" class="hover:text-white transition-colors">Privacidade</a>
+        <a id="escola-footer-wa" href="#" class="hover:text-white transition-colors">Contato</a>
+    </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script>
+    // Aplica WhatsApp do CONFIG em todos os links da página
+    document.addEventListener('DOMContentLoaded', () => {
+        const waUrl = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(CONFIG.WHATSAPP_MSG_ESCOLA)}`;
+        ['wa-escola-float','escola-footer-wa'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.href = waUrl;
+        });
+        // Botão inline de WhatsApp na seção de contato
+        const waBtn = document.getElementById('wa-escola-btn');
+        if (waBtn) waBtn.href = waUrl;
+    });
+
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const f = new FormData(this);
+
+        const nome     = f.get('nome')     || '';
+        const cargo    = f.get('cargo')    || '';
+        const escola   = f.get('escola')   || '';
+        const email    = f.get('email')    || '';
+        const telefone = f.get('telefone') || '';
+        const alunos   = f.get('alunos')   || '';
+        const mensagem = f.get('mensagem') || '';
+
+        const linhas = [
+            '👋 Olá! Tenho interesse no *ExpertKids para minha escola*.',
+            '',
+            `*Nome:* ${nome}`,
+            `*Cargo:* ${cargo}`,
+            `*Escola:* ${escola}`,
+            `*E-mail:* ${email}`,
+            telefone ? `*WhatsApp:* ${telefone}` : '',
+            `*Quantidade de alunos:* ${alunos}`,
+            mensagem ? `*Mensagem:* ${mensagem}` : '',
+        ].filter(l => l !== '');
+
+        const texto = linhas.join('\n');
+        window.open(`https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=` + encodeURIComponent(texto), '_blank');
+
+        this.classList.add('hidden');
+        document.getElementById('form-success').classList.remove('hidden');
+    });
+</script>
+
+</body>
+</html>
