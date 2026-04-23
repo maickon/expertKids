@@ -4,10 +4,10 @@ const CONFIG = {
 
     // ── Planos (R$) ──────────────────────────────────────────────────────
     PLAN_VALUE: 97.00,                      // 1 filho
-    PLAN_PRICES: [1, 167, 227, 277, 317],  // 1 a 5 filhos
+    PLAN_PRICES: [97, 167, 227, 277, 317],  // 1 a 5 filhos
 
     // ── Contato ───────────────────────────────────────────────────────────
-    WHATSAPP_NUMBER: '5511999999999',       // formato: DDI + DDD + número, sem espaços
+    WHATSAPP_NUMBER: '5522981877899',       // formato: DDI + DDD + número, sem espaços
     WHATSAPP_MSG_PAIS:   'Olá! Tenho dúvidas sobre o ExpertKids para minha família.',
     WHATSAPP_MSG_ESCOLA: 'Olá! Tenho interesse no ExpertKids para minha escola.',
     EMAIL_ESCOLAS: 'escolas@expertkids.space',

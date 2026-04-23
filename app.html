@@ -132,11 +132,31 @@
         <div id="game-area" class="flex-grow flex flex-col justify-center">
             <div id="setup-screen" class="space-y-6">
                 <h2 class="font-kids text-3xl font-bold text-slate-800 text-center mb-6">Escolha um Desafio:</h2>
-                <div class="grid grid-cols-1 gap-4">
-                    <button class="skill-btn btn-3d bg-green-500 text-white p-5 rounded-2xl flex items-center gap-4 text-left" data-skill="reading_basic"><span class="text-4xl">📖</span><div class="font-kids text-xl font-bold">Leitura</div></button>
-                    <button class="skill-btn btn-3d bg-purple-500 text-white p-5 rounded-2xl flex items-center gap-4 text-left" data-skill="classification"><span class="text-4xl">🔍</span><div class="font-kids text-xl font-bold">Classificação</div></button>
-                    <button class="skill-btn btn-3d bg-orange-500 text-white p-5 rounded-2xl flex items-center gap-4 text-left" data-skill="counting"><span class="text-4xl">🔢</span><div class="font-kids text-xl font-bold">Contagem</div></button>
-                    <button class="skill-btn btn-3d bg-blue-600 text-white p-5 rounded-2xl flex items-center gap-4 text-left" data-skill="math_basic"><span class="text-4xl">➕</span><div class="font-kids text-xl font-bold">Super Matemática</div></button>
+                <div class="grid grid-cols-1 gap-3">
+                    <button class="skill-btn btn-3d bg-green-500 text-white p-5 rounded-2xl flex items-center gap-4 text-left" data-skill="reading_basic">
+                        <span class="text-4xl">📖</span>
+                        <div><div class="font-kids text-xl font-bold">Leitura</div><div class="text-xs opacity-80 mt-0.5">Frases, sons e atributos</div></div>
+                    </button>
+                    <button class="skill-btn btn-3d bg-purple-500 text-white p-5 rounded-2xl flex items-center gap-4 text-left" data-skill="classification">
+                        <span class="text-4xl">🔍</span>
+                        <div><div class="font-kids text-xl font-bold">Classificação</div><div class="text-xs opacity-80 mt-0.5">Grupos, habitats e materiais</div></div>
+                    </button>
+                    <button class="skill-btn btn-3d bg-orange-500 text-white p-5 rounded-2xl flex items-center gap-4 text-left" data-skill="counting">
+                        <span class="text-4xl">🔢</span>
+                        <div><div class="font-kids text-xl font-bold">Contagem</div><div class="text-xs opacity-80 mt-0.5">Contar emojis e quantidades</div></div>
+                    </button>
+                    <button class="skill-btn btn-3d bg-blue-600 text-white p-5 rounded-2xl flex items-center gap-4 text-left" data-skill="math_basic">
+                        <span class="text-4xl">➕</span>
+                        <div><div class="font-kids text-xl font-bold">Super Matemática</div><div class="text-xs opacity-80 mt-0.5">Somas, subtrações e mais</div></div>
+                    </button>
+                    <button class="skill-btn btn-3d bg-pink-500 text-white p-5 rounded-2xl flex items-center gap-4 text-left" data-skill="vocabulary">
+                        <span class="text-4xl">🔤</span>
+                        <div><div class="font-kids text-xl font-bold">Vocabulário</div><div class="text-xs opacity-80 mt-0.5">Nomes, sons e descrições</div></div>
+                    </button>
+                    <button class="skill-btn btn-3d bg-teal-500 text-white p-5 rounded-2xl flex items-center gap-4 text-left" data-skill="mundo">
+                        <span class="text-4xl">🌍</span>
+                        <div><div class="font-kids text-xl font-bold">Mundo ao Redor</div><div class="text-xs opacity-80 mt-0.5">Clima, natureza e espaço</div></div>
+                    </button>
                 </div>
                 <div class="mt-8 text-center"><button id="open-parents-gate" class="text-slate-400 font-bold flex items-center justify-center gap-2 mx-auto">⚙️ Área dos Pais</button></div>
             </div>
@@ -175,11 +195,24 @@
     <script src="js/knowledgeBase.js"></script>
     <script src="js/templates.js"></script>
     <script src="js/generator.js"></script>
+    <script src="js/database/animais.js"></script>
+    <script src="js/database/clima-tempo.js"></script>
+    <script src="js/database/corpos-celestes.js"></script>
+    <script src="js/database/elementos-da-natureza.js"></script>
+    <script src="js/database/estacoes-do-ano.js"></script>
+    <script src="js/database/frutas.js"></script>
+    <script src="js/database/objetos.js"></script>
+    <script src="js/database/corpo-humano.js"></script>
+    <script src="js/database/cores-formas.js"></script>
+    <script src="js/database/profissoes.js"></script>
+    <script src="js/database/alimentos.js"></script>
+    <script src="js/database/valores-humanos.js"></script>
     <script src="js/payment.js"></script>
     <script src="js/app.js"></script>
     <script>
         $(document).ready(function() {
-            // Pré-preenche o e-mail: prioridade para URL param (vindo do pagamento), depois localStorage
+
+            // ── Login ─────────────────────────────────────────────────────────
             const urlEmail   = new URLSearchParams(window.location.search).get('email');
             const savedEmail = urlEmail || localStorage.getItem('expertkids_user_email');
             if (savedEmail) {
@@ -195,7 +228,6 @@
                 $('#login-error').addClass('hidden');
                 $(this).prop('disabled', true).text('Verificando...');
 
-                // E-mails de teste: entram sem consultar a API
                 const isTestEmail = (CONFIG.TEST_EMAILS || [])
                     .map(e => e.toLowerCase()).includes(email);
 
@@ -220,21 +252,67 @@
             });
 
             $('#resume-trial-btn').on('click', () => $('#login-screen').fadeOut());
-            
-            // Lógica Área dos Pais
+
+            // ── Área dos Pais — portal de segurança ──────────────────────────
             let gateAns = 0;
-            $('#open-parents-gate').on('click', () => {
-                const n1 = Math.floor(Math.random()*10)+5; const n2 = Math.floor(Math.random()*10)+5;
-                gateAns = n1+n2; $('#gate-question').text(`${n1} + ${n2} = ?`);
-                $('#parents-gate').css('display','flex');
+
+            $('#open-parents-gate').on('click', function() {
+                const n1 = Math.floor(Math.random() * 10) + 5;
+                const n2 = Math.floor(Math.random() * 10) + 5;
+                gateAns = n1 + n2;
+                $('#gate-question').text(n1 + ' + ' + n2 + ' = ?');
+                $('#gate-answer').val('');
+                $('#parents-gate').css('display', 'flex');
             });
-            $('#verify-gate').on('click', () => {
-                if(parseInt($('#gate-answer').val()) === gateAns) {
-                    $('#parents-gate').hide(); $('#setup-screen').hide(); $('#parents-screen').show();
+
+            $('#cancel-gate').on('click', function() {
+                $('#parents-gate').hide();
+                $('#gate-answer').val('');
+            });
+
+            $('#verify-gate').on('click', function() {
+                if (parseInt($('#gate-answer').val()) === gateAns) {
+                    $('#parents-gate').hide();
+                    $('#setup-screen').hide();
+                    $('#parents-screen').show();
+
+                    // Mostra data de validade do plano
                     const p = JSON.parse(localStorage.getItem('expertkids_plan_data') || '{}');
-                    $('#plan-end').text(p.expiryDate ? new Date(p.expiryDate).toLocaleDateString() : 'TESTE');
+                    $('#plan-end').text(
+                        p.expiryDate
+                            ? new Date(p.expiryDate + 'T12:00:00').toLocaleDateString('pt-BR')
+                            : 'TESTE'
+                    );
+
+                    // Pré-preenche dados salvos dos pais
+                    const parentsData = JSON.parse(localStorage.getItem('expertkids_parents') || '{}');
+                    if (parentsData.father)    $('#parent-father').val(parentsData.father);
+                    if (parentsData.mother)    $('#parent-mother').val(parentsData.mother);
+                    if (parentsData.whatsapp)  $('#parent-whatsapp').val(parentsData.whatsapp);
                 }
             });
+
+            $('#close-parents').on('click', function() {
+                $('#parents-screen').hide();
+                $('#setup-screen').show();
+            });
+
+            $('#save-parents-data').on('click', function() {
+                const data = {
+                    father:   $('#parent-father').val().trim(),
+                    mother:   $('#parent-mother').val().trim(),
+                    whatsapp: $('#parent-whatsapp').val().trim().replace(/\D/g, '')
+                };
+                localStorage.setItem('expertkids_parents', JSON.stringify(data));
+                $(this)
+                    .text('✅ Salvo!')
+                    .addClass('bg-green-500')
+                    .removeClass('bg-blue-600');
+                setTimeout(() => {
+                    $(this).text('Salvar').removeClass('bg-green-500').addClass('bg-blue-600');
+                }, 2000);
+            });
+
         });
     </script>
 

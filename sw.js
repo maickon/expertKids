@@ -2,7 +2,7 @@
 // ExpertKids Service Worker
 // Bump CACHE_VERSION a cada novo deploy para acionar o fluxo de atualização.
 // ─────────────────────────────────────────────────────────────────────────────
-const CACHE_VERSION = 'v3';
+const CACHE_VERSION = 'v8';
 const CACHE_NAME    = `expertkids-${CACHE_VERSION}`;
 
 // Arquivos que serão cacheados imediatamente na instalação (precache)
@@ -21,6 +21,19 @@ const PRECACHE = [
     'js/knowledgeBase.js',
     'js/templates.js',
     'js/payment.js',
+    // Database (essencial para modo offline)
+    'js/database/animais.js',
+    'js/database/clima-tempo.js',
+    'js/database/corpos-celestes.js',
+    'js/database/elementos-da-natureza.js',
+    'js/database/estacoes-do-ano.js',
+    'js/database/frutas.js',
+    'js/database/objetos.js',
+    'js/database/corpo-humano.js',
+    'js/database/cores-formas.js',
+    'js/database/profissoes.js',
+    'js/database/alimentos.js',
+    'js/database/valores-humanos.js',
     // Imagens
     'img/icon.png',
     'img/logo.png',
