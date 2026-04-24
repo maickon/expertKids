@@ -118,7 +118,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Peixe",
     type: "alimento",
     emoji: "🐟",
-    image: "/img/database/peixe.jpg",
+    image: "/img/database/peixe_alimento.jpg",
     difficulty: 2,
     tags: ["alimento", "proteina", "omega3", "saudavel"],
     attributes: {
