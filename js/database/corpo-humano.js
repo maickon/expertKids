@@ -6,7 +6,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Olho",
     type: "corpo_humano",
     emoji: "👁️",
-    image: "https://images.unsplash.com/photo-1580310614729-ccd69652491d?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/olho.jpg",
     difficulty: 1,
     tags: ["corpo_humano", "sentido", "visao", "rosto"],
     attributes: {
@@ -24,7 +24,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Orelha",
     type: "corpo_humano",
     emoji: "👂",
-    image: "https://images.unsplash.com/photo-1589571894960-20bbe2828d0a?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/ouvido.jpg",
     difficulty: 1,
     tags: ["corpo_humano", "sentido", "audicao", "rosto"],
     attributes: {
@@ -42,7 +42,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Nariz",
     type: "corpo_humano",
     emoji: "👃",
-    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/nariz.jpg",
     difficulty: 1,
     tags: ["corpo_humano", "sentido", "olfato", "rosto"],
     attributes: {
@@ -60,7 +60,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Boca",
     type: "corpo_humano",
     emoji: "👄",
-    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/boca.jpg",
     difficulty: 1,
     tags: ["corpo_humano", "sentido", "paladar", "rosto"],
     attributes: {
@@ -78,7 +78,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Mão",
     type: "corpo_humano",
     emoji: "✋",
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/mao.jpg",
     difficulty: 1,
     tags: ["corpo_humano", "sentido", "tato", "membro"],
     attributes: {
@@ -96,7 +96,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Pé",
     type: "corpo_humano",
     emoji: "🦶",
-    image: "https://images.unsplash.com/photo-1519689373023-dd07c7988603?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/pe.jpg",
     difficulty: 1,
     tags: ["corpo_humano", "membro", "locomocao"],
     attributes: {
@@ -114,7 +114,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Coração",
     type: "corpo_humano",
     emoji: "❤️",
-    image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/coracao.jpg",
     difficulty: 2,
     tags: ["corpo_humano", "orgao", "circulacao"],
     attributes: {
@@ -132,7 +132,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Cérebro",
     type: "corpo_humano",
     emoji: "🧠",
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/cerebro.jpg",
     difficulty: 2,
     tags: ["corpo_humano", "orgao", "pensamento"],
     attributes: {
@@ -150,7 +150,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Dente",
     type: "corpo_humano",
     emoji: "🦷",
-    image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/dente.jpg",
     difficulty: 1,
     tags: ["corpo_humano", "saude", "boca"],
     attributes: {
@@ -168,7 +168,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Cabelo",
     type: "corpo_humano",
     emoji: "💇",
-    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/cabelo.jpg",
     difficulty: 1,
     tags: ["corpo_humano", "externo", "protecao"],
     attributes: {
@@ -186,7 +186,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Braço",
     type: "corpo_humano",
     emoji: "💪",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/braco.jpg",
     difficulty: 1,
     tags: ["corpo_humano", "membro", "forca"],
     attributes: {
@@ -204,7 +204,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Perna",
     type: "corpo_humano",
     emoji: "🦵",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/perna.jpg",
     difficulty: 1,
     tags: ["corpo_humano", "membro", "locomocao"],
     attributes: {
@@ -221,8 +221,8 @@ KNOWLEDGE_BASE.entities.push(
     id: "pulmao",
     label: "Pulmão",
     type: "corpo_humano",
-    emoji: "🫁",
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=300&q=80",
+    emoji: "🧍‍",
+    image: "/img/database/pulmao.jpg",
     difficulty: 2,
     tags: ["corpo_humano", "orgao", "respiracao"],
     attributes: {
@@ -239,8 +239,8 @@ KNOWLEDGE_BASE.entities.push(
     id: "estomago",
     label: "Estômago",
     type: "corpo_humano",
-    emoji: "🫃",
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=300&q=80",
+    emoji: "🤰",
+    image: "/img/database/estomago.jpg",
     difficulty: 3,
     tags: ["corpo_humano", "orgao", "digestao"],
     attributes: {
@@ -258,7 +258,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Língua",
     type: "corpo_humano",
     emoji: "👅",
-    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/lingua.jpg",
     difficulty: 2,
     tags: ["corpo_humano", "sentido", "paladar", "boca"],
     attributes: {

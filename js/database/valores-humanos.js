@@ -6,7 +6,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Respeito",
     type: "valor",
     emoji: "🤝",
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/respeito.jpg",
     difficulty: 1,
     tags: ["valor", "relacoes", "escola", "fundamental"],
     attributes: {
@@ -23,7 +23,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Amizade",
     type: "valor",
     emoji: "🫂",
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/amizade.jpg",
     difficulty: 1,
     tags: ["valor", "relacoes", "escola", "felicidade"],
     attributes: {
@@ -40,7 +40,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Honestidade",
     type: "valor",
     emoji: "✅",
-    image: "https://images.unsplash.com/photo-1535320903710-d993d3d77d29?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/honestidade.jpg",
     difficulty: 1,
     tags: ["valor", "carater", "confianca", "fundamental"],
     attributes: {
@@ -57,7 +57,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Generosidade",
     type: "valor",
     emoji: "🎁",
-    image: "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/generosidade.jpg",
     difficulty: 1,
     tags: ["valor", "doacao", "empatia", "carater"],
     attributes: {
@@ -74,7 +74,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Responsabilidade",
     type: "valor",
     emoji: "📋",
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/responsabilidade.jpg",
     difficulty: 2,
     tags: ["valor", "carater", "confianca", "maturidade"],
     attributes: {
@@ -91,7 +91,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Coragem",
     type: "valor",
     emoji: "💪",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/coragem.jpg",
     difficulty: 1,
     tags: ["valor", "carater", "superacao", "autoconfianca"],
     attributes: {
@@ -108,7 +108,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Paciência",
     type: "valor",
     emoji: "⏳",
-    image: "https://images.unsplash.com/photo-1495364141860-b0d03eccd065?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/paciencia.jpg",
     difficulty: 2,
     tags: ["valor", "autocontrole", "maturidade", "serenidade"],
     attributes: {
@@ -125,7 +125,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Empatia",
     type: "valor",
     emoji: "❤️",
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/empatia.jpg",
     difficulty: 2,
     tags: ["valor", "relacoes", "sensibilidade", "importante"],
     attributes: {
@@ -142,7 +142,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Gratidão",
     type: "valor",
     emoji: "🙏",
-    image: "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/gratidao.jpg",
     difficulty: 1,
     tags: ["valor", "felicidade", "carater", "reconhecimento"],
     attributes: {
@@ -159,7 +159,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Solidariedade",
     type: "valor",
     emoji: "🤲",
-    image: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/solidariedade.jpg",
     difficulty: 2,
     tags: ["valor", "comunidade", "ajuda", "coletividade"],
     attributes: {
@@ -176,7 +176,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Perseverança",
     type: "valor",
     emoji: "🏃",
-    image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/perseveranca.jpg",
     difficulty: 2,
     tags: ["valor", "superacao", "carater", "determinacao"],
     attributes: {
@@ -193,7 +193,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Bondade",
     type: "valor",
     emoji: "💛",
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/bondade.jpg",
     difficulty: 1,
     tags: ["valor", "carater", "amor", "fundamental"],
     attributes: {

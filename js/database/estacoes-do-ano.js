@@ -6,7 +6,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Primavera",
     type: "estacao",
     emoji: "🌸",
-    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/primavera.jpg",
     difficulty: 1,
     tags: ["estacao", "natureza", "flores", "colorido"],
     attributes: {
@@ -25,7 +25,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Verão",
     type: "estacao",
     emoji: "🏖️",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/verao.jpg",
     difficulty: 1,
     tags: ["estacao", "calor", "ferias", "praia"],
     attributes: {
@@ -44,7 +44,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Outono",
     type: "estacao",
     emoji: "🍂",
-    image: "https://images.unsplash.com/photo-1507181179506-310bd112d312?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/outono.jpg",
     difficulty: 1,
     tags: ["estacao", "folhas", "laranja", "frescor"],
     attributes: {
@@ -63,7 +63,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Inverno",
     type: "estacao",
     emoji: "🧣",
-    image: "https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/inverno.jpg",
     difficulty: 1,
     tags: ["estacao", "frio", "agasalho", "noites_longas"],
     attributes: {

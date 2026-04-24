@@ -6,7 +6,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Lua",
     type: "corpo_celeste",
     emoji: "🌙",
-    image: "https://images.unsplash.com/photo-1532693322450-2cb5c511067d?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/lua.jpg",
     difficulty: 1,
     tags: ["espaco", "corpo_celeste", "noite", "satelite"],
     attributes: {
@@ -24,7 +24,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Estrelas",
     type: "corpo_celeste",
     emoji: "⭐",
-    image: "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/estrelas.jpg",
     difficulty: 2,
     tags: ["espaco", "corpo_celeste", "noite", "brilhante"],
     attributes: {
@@ -42,7 +42,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Planeta Terra",
     type: "corpo_celeste",
     emoji: "🌍",
-    image: "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/terra.jpg",
     difficulty: 1,
     tags: ["espaco", "corpo_celeste", "planeta", "casa"],
     attributes: {
@@ -60,7 +60,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Marte",
     type: "corpo_celeste",
     emoji: "🪐",
-    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/marte.jpg",
     difficulty: 2,
     tags: ["espaco", "corpo_celeste", "planeta", "vermelho"],
     attributes: {
@@ -78,7 +78,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Cometa",
     type: "corpo_celeste",
     emoji: "☄️",
-    image: "https://images.unsplash.com/photo-1614729939131-6e3e4b9ce9b4?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/cometa.jpg",
     difficulty: 3,
     tags: ["espaco", "corpo_celeste", "brilhante", "raro"],
     attributes: {
@@ -96,7 +96,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Sistema Solar",
     type: "corpo_celeste",
     emoji: "🌌",
-    image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/sistema_solar.jpg",
     difficulty: 2,
     tags: ["espaco", "corpo_celeste", "planeta", "sol"],
     attributes: {
@@ -114,7 +114,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Saturno",
     type: "corpo_celeste",
     emoji: "🪐",
-    image: "https://images.unsplash.com/photo-1614313913007-2b4ae8ce32d6?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/saturno.jpg",
     difficulty: 2,
     tags: ["espaco", "corpo_celeste", "planeta", "aneis"],
     attributes: {

@@ -8,7 +8,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Arroz",
     type: "alimento",
     emoji: "🍚",
-    image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/arroz.jpg",
     difficulty: 1,
     tags: ["alimento", "carboidrato", "base", "brasileiro"],
     attributes: {
@@ -26,7 +26,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Feijão",
     type: "alimento",
     emoji: "🫘",
-    image: "https://images.unsplash.com/photo-1611048268330-53de574cae3b?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/feijao.jpg",
     difficulty: 1,
     tags: ["alimento", "proteina", "fibra", "brasileiro"],
     attributes: {
@@ -44,7 +44,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Pão",
     type: "alimento",
     emoji: "🍞",
-    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/pao.jpg",
     difficulty: 1,
     tags: ["alimento", "carboidrato", "cafe", "cotidiano"],
     attributes: {
@@ -62,7 +62,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Batata",
     type: "alimento",
     emoji: "🥔",
-    image: "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/batata.jpg",
     difficulty: 1,
     tags: ["alimento", "carboidrato", "vegetal", "versatil"],
     attributes: {
@@ -82,7 +82,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Ovo",
     type: "alimento",
     emoji: "🥚",
-    image: "https://images.unsplash.com/photo-1510693206972-df098062cb71?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/ovo.jpg",
     difficulty: 1,
     tags: ["alimento", "proteina", "versatil", "nutritivo"],
     attributes: {
@@ -100,7 +100,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Frango",
     type: "alimento",
     emoji: "🍗",
-    image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/frango.jpg",
     difficulty: 1,
     tags: ["alimento", "proteina", "carne", "popular"],
     attributes: {
@@ -118,7 +118,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Peixe",
     type: "alimento",
     emoji: "🐟",
-    image: "https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/peixe.jpg",
     difficulty: 2,
     tags: ["alimento", "proteina", "omega3", "saudavel"],
     attributes: {
@@ -138,7 +138,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Leite",
     type: "alimento",
     emoji: "🥛",
-    image: "https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/leite.jpg",
     difficulty: 1,
     tags: ["alimento", "laticinios", "calcio", "crianca"],
     attributes: {
@@ -156,7 +156,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Queijo",
     type: "alimento",
     emoji: "🧀",
-    image: "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/queijo.jpg",
     difficulty: 1,
     tags: ["alimento", "laticinios", "calcio", "gostoso"],
     attributes: {
@@ -176,7 +176,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Cenoura",
     type: "alimento",
     emoji: "🥕",
-    image: "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/cenoura.jpg",
     difficulty: 1,
     tags: ["alimento", "vegetal", "vitamina_a", "laranja"],
     attributes: {
@@ -194,7 +194,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Brócolis",
     type: "alimento",
     emoji: "🥦",
-    image: "https://images.unsplash.com/photo-1584270354949-c26b0d5b4a0c?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/brocolis.jpg",
     difficulty: 1,
     tags: ["alimento", "vegetal", "vitaminas", "verde", "saudavel"],
     attributes: {
@@ -212,7 +212,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Tomate",
     type: "alimento",
     emoji: "🍅",
-    image: "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/tomate.jpg",
     difficulty: 1,
     tags: ["alimento", "vegetal", "vitamina_c", "vermelho"],
     attributes: {
@@ -232,7 +232,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Mel",
     type: "alimento",
     emoji: "🍯",
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/mel.jpg",
     difficulty: 2,
     tags: ["alimento", "natural", "doce", "abelha"],
     attributes: {
@@ -250,7 +250,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Água",
     type: "alimento",
     emoji: "💧",
-    image: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/agua.jpg",
     difficulty: 1,
     tags: ["alimento", "essencial", "hidratacao", "vida"],
     attributes: {
@@ -268,7 +268,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Macarrão",
     type: "alimento",
     emoji: "🍝",
-    image: "https://images.unsplash.com/photo-1551183053-bf91798d454c?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/macarrao.jpg",
     difficulty: 1,
     tags: ["alimento", "carboidrato", "popular", "versatil"],
     attributes: {

@@ -8,7 +8,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Gato",
     type: "animal",
     emoji: "🐱",
-    image: "https://images.unsplash.com/photo-1514888286872-01d6d89f4c1b?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/gato.jpg",
     difficulty: 1,
     tags: ["animal", "mamifero", "domestico", "terrestre"],
     attributes: {
@@ -27,7 +27,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Cachorro",
     type: "animal",
     emoji: "🐶",
-    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/cachoro.jpg",
     difficulty: 1,
     tags: ["animal", "mamifero", "domestico", "terrestre"],
     attributes: {
@@ -46,7 +46,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Vaca",
     type: "animal",
     emoji: "🐄",
-    image: "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/vaca.jpg",
     difficulty: 1,
     tags: ["animal", "mamifero", "domestico", "terrestre", "fazenda"],
     attributes: {
@@ -65,7 +65,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Galinha",
     type: "animal",
     emoji: "🐔",
-    image: "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/galinha.jpg",
     difficulty: 1,
     tags: ["animal", "ave", "domestico", "fazenda"],
     attributes: {
@@ -84,7 +84,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Cavalo",
     type: "animal",
     emoji: "🐴",
-    image: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/galinha.jpg",
     difficulty: 1,
     tags: ["animal", "mamifero", "domestico", "terrestre", "fazenda"],
     attributes: {
@@ -103,7 +103,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Porco",
     type: "animal",
     emoji: "🐷",
-    image: "https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/porco.jpg",
     difficulty: 1,
     tags: ["animal", "mamifero", "domestico", "fazenda"],
     attributes: {
@@ -122,7 +122,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Ovelha",
     type: "animal",
     emoji: "🐑",
-    image: "https://images.unsplash.com/photo-1484557985045-edf25e7dffd2?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/ovelha.jpg",
     difficulty: 1,
     tags: ["animal", "mamifero", "domestico", "fazenda"],
     attributes: {
@@ -141,7 +141,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Pato",
     type: "animal",
     emoji: "🦆",
-    image: "https://images.unsplash.com/photo-1459682686776-de0bb2f51a8f?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/pato.jpg",
     difficulty: 1,
     tags: ["animal", "ave", "domestico", "aquatico", "fazenda"],
     attributes: {
@@ -160,7 +160,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Coelho",
     type: "animal",
     emoji: "🐰",
-    image: "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/coelho.jpg",
     difficulty: 1,
     tags: ["animal", "mamifero", "domestico", "terrestre"],
     attributes: {
@@ -181,7 +181,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Leão",
     type: "animal",
     emoji: "🦁",
-    image: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/leao.jpg",
     difficulty: 1,
     tags: ["animal", "mamifero", "selvagem", "terrestre", "carnivoro", "africa"],
     attributes: {
@@ -200,7 +200,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Elefante",
     type: "animal",
     emoji: "🐘",
-    image: "https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/elefante.jpg",
     difficulty: 1,
     tags: ["animal", "mamifero", "selvagem", "terrestre", "herbivoro", "africa"],
     attributes: {
@@ -219,7 +219,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Girafa",
     type: "animal",
     emoji: "🦒",
-    image: "https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/girafa.jpg",
     difficulty: 1,
     tags: ["animal", "mamifero", "selvagem", "terrestre", "herbivoro", "africa"],
     attributes: {
@@ -238,7 +238,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Macaco",
     type: "animal",
     emoji: "🐒",
-    image: "https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/macaco.jpg",
     difficulty: 1,
     tags: ["animal", "mamifero", "selvagem", "terrestre", "herbivoro", "floresta"],
     attributes: {
@@ -257,7 +257,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Zebra",
     type: "animal",
     emoji: "🦓",
-    image: "https://images.unsplash.com/photo-1501706362039-c06b2d715385?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/zebra.jpg",
     difficulty: 2,
     tags: ["animal", "mamifero", "selvagem", "terrestre", "herbivoro", "africa"],
     attributes: {
@@ -276,7 +276,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Hipopótamo",
     type: "animal",
     emoji: "🦛",
-    image: "https://images.unsplash.com/photo-1534567406532-a40951a4b2ae?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/hipopotamo.jpg",
     difficulty: 2,
     tags: ["animal", "mamifero", "selvagem", "aquatico", "herbivoro", "africa"],
     attributes: {
@@ -295,7 +295,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Tigre",
     type: "animal",
     emoji: "🐯",
-    image: "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/tigre.jpg",
     difficulty: 2,
     tags: ["animal", "mamifero", "selvagem", "terrestre", "carnivoro", "asia"],
     attributes: {
@@ -314,7 +314,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Urso",
     type: "animal",
     emoji: "🐻",
-    image: "https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/urso.jpg",
     difficulty: 2,
     tags: ["animal", "mamifero", "selvagem", "terrestre", "floresta"],
     attributes: {
@@ -335,7 +335,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Peixe",
     type: "animal",
     emoji: "🐟",
-    image: "https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/peixe_animal.jpg",
     difficulty: 1,
     tags: ["animal", "aquatico", "selvagem", "agua_doce", "agua_salgada"],
     attributes: {
@@ -354,7 +354,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Golfinho",
     type: "animal",
     emoji: "🐬",
-    image: "https://images.unsplash.com/photo-1607153333879-c174d265f1d2?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/golfinho.jpg",
     difficulty: 2,
     tags: ["animal", "mamifero", "aquatico", "selvagem", "mar"],
     attributes: {
@@ -373,7 +373,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Tubarão",
     type: "animal",
     emoji: "🦈",
-    image: "https://images.unsplash.com/photo-1560275619-4cc5fa59d3ae?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/tubarao.jpg",
     difficulty: 2,
     tags: ["animal", "peixe", "aquatico", "selvagem", "mar", "carnivoro"],
     attributes: {
@@ -392,7 +392,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Polvo",
     type: "animal",
     emoji: "🐙",
-    image: "https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/polvo.jpg",
     difficulty: 3,
     tags: ["animal", "molusco", "aquatico", "selvagem", "mar"],
     attributes: {
@@ -413,7 +413,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Pássaro",
     type: "animal",
     emoji: "🐦",
-    image: "https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/passaro.jpg",
     difficulty: 1,
     tags: ["animal", "ave", "voador", "selvagem"],
     attributes: {
@@ -432,7 +432,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Pinguim",
     type: "animal",
     emoji: "🐧",
-    image: "https://images.unsplash.com/photo-1551986782-d0169b3f8fa7?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/pinguim.jpg",
     difficulty: 2,
     tags: ["animal", "ave", "aquatico", "selvagem", "frio"],
     attributes: {
@@ -451,7 +451,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Coruja",
     type: "animal",
     emoji: "🦉",
-    image: "https://images.unsplash.com/photo-1543549049-9fbfd1eca29e?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/coruja.jpg",
     difficulty: 2,
     tags: ["animal", "ave", "voador", "selvagem", "noturno"],
     attributes: {
@@ -472,7 +472,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Borboleta",
     type: "animal",
     emoji: "🦋",
-    image: "https://images.unsplash.com/photo-1452570053594-1b985d6ea890?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/borboleta.jpg",
     difficulty: 1,
     tags: ["animal", "inseto", "voador", "selvagem", "colorido"],
     attributes: {
@@ -491,7 +491,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Abelha",
     type: "animal",
     emoji: "🐝",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/abelha.jpg",
     difficulty: 2,
     tags: ["animal", "inseto", "voador", "selvagem", "util"],
     attributes: {
@@ -512,7 +512,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Cobra",
     type: "animal",
     emoji: "🐍",
-    image: "https://images.unsplash.com/photo-1531386151447-fd76ad50012f?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/cobra.jpg",
     difficulty: 2,
     tags: ["animal", "reptil", "selvagem", "terrestre"],
     attributes: {
@@ -531,7 +531,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Tartaruga",
     type: "animal",
     emoji: "🐢",
-    image: "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/tartaruga.jpg",
     difficulty: 2,
     tags: ["animal", "reptil", "selvagem", "terrestre", "aquatico"],
     attributes: {
@@ -550,7 +550,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Sapo",
     type: "animal",
     emoji: "🐸",
-    image: "https://images.unsplash.com/photo-1498598457418-36ef20772bb9?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/sapo.jpg",
     difficulty: 2,
     tags: ["animal", "anfibio", "selvagem", "aquatico", "terrestre"],
     attributes: {
@@ -569,7 +569,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Crocodilo",
     type: "animal",
     emoji: "🐊",
-    image: "https://images.unsplash.com/photo-1579756808973-4c60a0a20e12?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/crocodilo.jpg",
     difficulty: 3,
     tags: ["animal", "reptil", "selvagem", "aquatico", "carnivoro", "perigoso"],
     attributes: {
@@ -588,7 +588,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Camelo",
     type: "animal",
     emoji: "🐪",
-    image: "https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/camelo.jpg",
     difficulty: 3,
     tags: ["animal", "mamifero", "selvagem", "terrestre", "deserto", "herbivoro"],
     attributes: {

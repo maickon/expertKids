@@ -8,7 +8,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Vermelho",
     type: "cor",
     emoji: "🔴",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/vermelho.jpg",
     difficulty: 1,
     tags: ["cor", "primaria", "quente"],
     attributes: {
@@ -25,7 +25,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Azul",
     type: "cor",
     emoji: "🔵",
-    image: "https://images.unsplash.com/photo-1505118380757-91f5f45d8de7?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/azul.jpg",
     difficulty: 1,
     tags: ["cor", "primaria", "frio"],
     attributes: {
@@ -42,7 +42,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Amarelo",
     type: "cor",
     emoji: "🟡",
-    image: "https://images.unsplash.com/photo-1571771894821-ad9958a35c47?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/amarelo.jpg",
     difficulty: 1,
     tags: ["cor", "primaria", "quente"],
     attributes: {
@@ -59,7 +59,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Verde",
     type: "cor",
     emoji: "🟢",
-    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/verde.jpg",
     difficulty: 1,
     tags: ["cor", "secundaria", "natureza"],
     attributes: {
@@ -76,7 +76,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Laranja",
     type: "cor",
     emoji: "🟠",
-    image: "https://images.unsplash.com/photo-1582979512210-99b6a53386f9?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/laranja.jpg",
     difficulty: 1,
     tags: ["cor", "secundaria", "quente"],
     attributes: {
@@ -93,7 +93,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Roxo",
     type: "cor",
     emoji: "🟣",
-    image: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/roxo.jpg",
     difficulty: 1,
     tags: ["cor", "secundaria", "frio"],
     attributes: {
@@ -110,7 +110,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Branco",
     type: "cor",
     emoji: "⬜",
-    image: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/branco.jpg",
     difficulty: 1,
     tags: ["cor", "neutro", "luz"],
     attributes: {
@@ -127,7 +127,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Preto",
     type: "cor",
     emoji: "⬛",
-    image: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/preto.jpg",
     difficulty: 1,
     tags: ["cor", "neutro", "escuridao"],
     attributes: {
@@ -146,7 +146,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Círculo",
     type: "forma",
     emoji: "⭕",
-    image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/circulo.jpg",
     difficulty: 1,
     tags: ["forma", "redondo", "geometrica"],
     attributes: {
@@ -163,7 +163,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Quadrado",
     type: "forma",
     emoji: "🟥",
-    image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/quadrado.jpg",
     difficulty: 1,
     tags: ["forma", "geometrica", "4lados"],
     attributes: {
@@ -180,7 +180,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Triângulo",
     type: "forma",
     emoji: "🔺",
-    image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/triangulo.jpg",
     difficulty: 1,
     tags: ["forma", "geometrica", "3lados"],
     attributes: {
@@ -196,8 +196,8 @@ KNOWLEDGE_BASE.entities.push(
     id: "retangulo",
     label: "Retângulo",
     type: "forma",
-    emoji: "🔷",
-    image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=300&q=80",
+    emoji: "▅",
+    image: "/img/database/retangulo.jpg",
     difficulty: 1,
     tags: ["forma", "geometrica", "4lados"],
     attributes: {
@@ -214,7 +214,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Estrela",
     type: "forma",
     emoji: "⭐",
-    image: "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/estrela.jpg",
     difficulty: 2,
     tags: ["forma", "geometrica", "pontas"],
     attributes: {
@@ -231,7 +231,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Coração (forma)",
     type: "forma",
     emoji: "❤️",
-    image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/coracao.jpg",
     difficulty: 1,
     tags: ["forma", "simbolo", "amor"],
     attributes: {
@@ -248,7 +248,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Losango",
     type: "forma",
     emoji: "🔶",
-    image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/losango.jpg",
     difficulty: 2,
     tags: ["forma", "geometrica", "4lados"],
     attributes: {

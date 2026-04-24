@@ -6,7 +6,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Rio",
     type: "natureza",
     emoji: "🏞️",
-    image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/rio.jpg",
     difficulty: 1,
     tags: ["natureza", "agua", "doce", "geografía"],
     attributes: {
@@ -24,7 +24,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Mar",
     type: "natureza",
     emoji: "🌊",
-    image: "https://images.unsplash.com/photo-1505118380757-91f5f45d8de7?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/mar.jpg",
     difficulty: 1,
     tags: ["natureza", "agua", "salgada", "geografía", "grande"],
     attributes: {
@@ -42,7 +42,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Montanha",
     type: "natureza",
     emoji: "⛰️",
-    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/montanha.jpg",
     difficulty: 1,
     tags: ["natureza", "terrestre", "alto", "geografía"],
     attributes: {
@@ -60,7 +60,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Vulcão",
     type: "natureza",
     emoji: "🌋",
-    image: "https://images.unsplash.com/photo-1524311105153-f72520336208?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/vulcao.jpg",
     difficulty: 2,
     tags: ["natureza", "terrestre", "fogo", "geografía", "perigo"],
     attributes: {
@@ -78,7 +78,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Floresta",
     type: "natureza",
     emoji: "🌳",
-    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/floresta.jpg",
     difficulty: 1,
     tags: ["natureza", "vegetacao", "ar", "geografía", "verde"],
     attributes: {
@@ -96,7 +96,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Deserto",
     type: "natureza",
     emoji: "🏜️",
-    image: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/deserto.jpg",
     difficulty: 2,
     tags: ["natureza", "terrestre", "seco", "geografía", "quente"],
     attributes: {
@@ -114,7 +114,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Cachoeira",
     type: "natureza",
     emoji: "💦",
-    image: "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/cachoeira.jpg",
     difficulty: 2,
     tags: ["natureza", "agua", "doce", "geografía", "belo"],
     attributes: {
@@ -132,7 +132,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Lago",
     type: "natureza",
     emoji: "🏔️",
-    image: "https://images.unsplash.com/photo-1439853949212-36cb5180e702?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/lago.jpg",
     difficulty: 1,
     tags: ["natureza", "agua", "doce", "geografía", "calmo"],
     attributes: {
@@ -150,7 +150,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Praia",
     type: "natureza",
     emoji: "🏖️",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/praia.jpg",
     difficulty: 1,
     tags: ["natureza", "agua", "areia", "geografía", "verao"],
     attributes: {

@@ -8,7 +8,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Maçã",
     type: "fruta",
     emoji: "🍎",
-    image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/maca.jpg",
     difficulty: 1,
     tags: ["fruta", "alimento", "saudavel", "doce", "vermelha"],
     attributes: {
@@ -28,7 +28,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Banana",
     type: "fruta",
     emoji: "🍌",
-    image: "https://images.unsplash.com/photo-1571771894821-ad9958a35c47?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/banana.jpg",
     difficulty: 1,
     tags: ["fruta", "alimento", "saudavel", "doce", "amarela"],
     attributes: {
@@ -48,7 +48,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Laranja",
     type: "fruta",
     emoji: "🍊",
-    image: "https://images.unsplash.com/photo-1582979512210-99b6a53386f9?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/laranja.jpg",
     difficulty: 1,
     tags: ["fruta", "alimento", "saudavel", "azeda", "laranja"],
     attributes: {
@@ -68,7 +68,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Uva",
     type: "fruta",
     emoji: "🍇",
-    image: "https://images.unsplash.com/photo-1537640538966-79f369b41e8f?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/uva.jpg",
     difficulty: 1,
     tags: ["fruta", "alimento", "saudavel", "doce", "roxa"],
     attributes: {
@@ -88,7 +88,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Melancia",
     type: "fruta",
     emoji: "🍉",
-    image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/melancia.jpg",
     difficulty: 1,
     tags: ["fruta", "alimento", "saudavel", "doce", "grande", "vermelha"],
     attributes: {
@@ -108,7 +108,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Morango",
     type: "fruta",
     emoji: "🍓",
-    image: "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/morango.jpg",
     difficulty: 1,
     tags: ["fruta", "alimento", "saudavel", "azeda", "vermelha", "pequena"],
     attributes: {
@@ -128,7 +128,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Abacaxi",
     type: "fruta",
     emoji: "🍍",
-    image: "https://images.unsplash.com/photo-1490885578174-acda8905c2c6?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/abacaxi.jpg",
     difficulty: 1,
     tags: ["fruta", "alimento", "saudavel", "azeda", "amarela", "tropical"],
     attributes: {
@@ -148,7 +148,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Pêra",
     type: "fruta",
     emoji: "🍐",
-    image: "https://images.unsplash.com/photo-1541516160071-4bb0c5af65ba?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/pera.jpg",
     difficulty: 1,
     tags: ["fruta", "alimento", "saudavel", "doce", "verde"],
     attributes: {
@@ -170,7 +170,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Limão",
     type: "fruta",
     emoji: "🍋",
-    image: "https://images.unsplash.com/photo-1546630392-db5b1f04874a?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/limao.jpg",
     difficulty: 1,
     tags: ["fruta", "alimento", "saudavel", "azedo", "amarelo"],
     attributes: {
@@ -190,7 +190,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Manga",
     type: "fruta",
     emoji: "🥭",
-    image: "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/manga.jpg",
     difficulty: 2,
     tags: ["fruta", "alimento", "saudavel", "doce", "amarela", "tropical"],
     attributes: {
@@ -210,7 +210,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Melão",
     type: "fruta",
     emoji: "🍈",
-    image: "https://images.unsplash.com/photo-1571575173700-afb9492e6a50?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/melao.jpg",
     difficulty: 2,
     tags: ["fruta", "alimento", "saudavel", "doce", "amarela", "grande"],
     attributes: {
@@ -230,7 +230,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Pêssego",
     type: "fruta",
     emoji: "🍑",
-    image: "https://images.unsplash.com/photo-1595743825637-cdafc8ad4173?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/pessego.jpg",
     difficulty: 2,
     tags: ["fruta", "alimento", "saudavel", "doce", "laranja"],
     attributes: {
@@ -250,7 +250,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Cereja",
     type: "fruta",
     emoji: "🍒",
-    image: "https://images.unsplash.com/photo-1528821128474-27f963b062bf?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/cereja.jpg",
     difficulty: 2,
     tags: ["fruta", "alimento", "saudavel", "doce", "vermelha", "pequena"],
     attributes: {
@@ -270,7 +270,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Coco",
     type: "fruta",
     emoji: "🥥",
-    image: "https://images.unsplash.com/photo-1580984969071-a8da8e2b1d13?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/coco.jpg",
     difficulty: 2,
     tags: ["fruta", "alimento", "saudavel", "tropical", "grande"],
     attributes: {
@@ -290,7 +290,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Kiwi",
     type: "fruta",
     emoji: "🥝",
-    image: "https://images.unsplash.com/photo-1585059895524-72359e06133a?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/kiwi.jpg",
     difficulty: 2,
     tags: ["fruta", "alimento", "saudavel", "azeda", "verde", "exotica"],
     attributes: {
@@ -312,7 +312,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Abacate",
     type: "fruta",
     emoji: "🥑",
-    image: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/abacate.jpg",
     difficulty: 2,
     tags: ["fruta", "alimento", "saudavel", "verde", "gordura_boa"],
     attributes: {
@@ -332,7 +332,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Mirtilo",
     type: "fruta",
     emoji: "🫐",
-    image: "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/mirtilo.jpg",
     difficulty: 3,
     tags: ["fruta", "alimento", "saudavel", "azeda", "azul", "pequena", "exotica"],
     attributes: {

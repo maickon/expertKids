@@ -7,7 +7,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Sol",
     type: "clima",
     emoji: "☀️",
-    image: "https://images.unsplash.com/photo-1526467506497-1cd91a50106d?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/sol.jpg",
     difficulty: 1,
     tags: ["clima", "astro", "dia", "quente", "natureza"],
     attributes: {
@@ -25,7 +25,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Chuva",
     type: "clima",
     emoji: "🌧️",
-    image: "https://images.unsplash.com/photo-1534274988757-a28bf1f539cf?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/chuva.jpg",
     difficulty: 1,
     tags: ["clima", "agua", "nuvem", "natureza"],
     attributes: {
@@ -43,7 +43,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Vento",
     type: "clima",
     emoji: "🌬️",
-    image: "https://images.unsplash.com/photo-1505672678657-cc7037095e60?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/vento.jpg",
     difficulty: 2,
     tags: ["clima", "ar", "invisivel", "natureza"],
     attributes: {
@@ -61,7 +61,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Neve",
     type: "clima",
     emoji: "❄️",
-    image: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/neve.jpg",
     difficulty: 2,
     tags: ["clima", "frio", "inverno", "agua", "natureza"],
     attributes: {
@@ -79,7 +79,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Trovão",
     type: "clima",
     emoji: "⚡",
-    image: "https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/trovao.jpg",
     difficulty: 2,
     tags: ["clima", "tempestade", "barulhento", "natureza"],
     attributes: {
@@ -97,7 +97,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Arco-íris",
     type: "clima",
     emoji: "🌈",
-    image: "https://images.unsplash.com/photo-1444491741275-3747c53c99b4?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/arco_iris.jpg",
     difficulty: 2,
     tags: ["clima", "fenomeno", "colorido", "natureza", "luz"],
     attributes: {
@@ -115,7 +115,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Nuvem",
     type: "clima",
     emoji: "☁️",
-    image: "https://images.unsplash.com/photo-1561553873-e8491a564fd0?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/nuvem.jpg",
     difficulty: 1,
     tags: ["clima", "agua", "ceu", "natureza"],
     attributes: {
@@ -133,7 +133,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Neblina",
     type: "clima",
     emoji: "🌫️",
-    image: "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/neblina.jpg",
     difficulty: 2,
     tags: ["clima", "agua", "visibilidade", "natureza"],
     attributes: {
@@ -151,7 +151,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Granizo",
     type: "clima",
     emoji: "🌨️",
-    image: "https://images.unsplash.com/photo-1578269174936-2709b6aeb913?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/granizo.jpg",
     difficulty: 3,
     tags: ["clima", "gelo", "chuva", "natureza", "raro"],
     attributes: {
@@ -169,7 +169,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Tempestade",
     type: "clima",
     emoji: "⛈️",
-    image: "https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/tempestade.jpg",
     difficulty: 2,
     tags: ["clima", "chuva", "vento", "raio", "natureza"],
     attributes: {
@@ -187,7 +187,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Geada",
     type: "clima",
     emoji: "🥶",
-    image: "https://images.unsplash.com/photo-1477601263568-180e2c6d046e?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/geada.jpg",
     difficulty: 3,
     tags: ["clima", "gelo", "inverno", "natureza", "frio"],
     attributes: {

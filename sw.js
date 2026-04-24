@@ -2,7 +2,7 @@
 // ExpertKids Service Worker
 // Bump CACHE_VERSION a cada novo deploy para acionar o fluxo de atualização.
 // ─────────────────────────────────────────────────────────────────────────────
-const CACHE_VERSION = 'v8';
+const CACHE_VERSION = 'v9';
 const CACHE_NAME    = `expertkids-${CACHE_VERSION}`;
 
 // Arquivos que serão cacheados imediatamente na instalação (precache)

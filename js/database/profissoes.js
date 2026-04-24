@@ -6,7 +6,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Médico",
     type: "profissao",
     emoji: "🩺",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/medico.jpg",
     difficulty: 1,
     tags: ["profissao", "saude", "cuidado", "importante"],
     attributes: {
@@ -24,7 +24,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Professora",
     type: "profissao",
     emoji: "👩‍🏫",
-    image: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/professora.jpg",
     difficulty: 1,
     tags: ["profissao", "educacao", "escola", "importante"],
     attributes: {
@@ -42,7 +42,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Bombeiro",
     type: "profissao",
     emoji: "🧑‍🚒",
-    image: "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/bombeiro.jpg",
     difficulty: 1,
     tags: ["profissao", "seguranca", "coragem", "importante"],
     attributes: {
@@ -60,7 +60,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Policial",
     type: "profissao",
     emoji: "👮",
-    image: "https://images.unsplash.com/photo-1509909756405-be0199881695?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/policial.jpg",
     difficulty: 1,
     tags: ["profissao", "seguranca", "lei", "importante"],
     attributes: {
@@ -78,7 +78,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Cozinheiro",
     type: "profissao",
     emoji: "🧑‍🍳",
-    image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/cozinheiro.jpg",
     difficulty: 1,
     tags: ["profissao", "alimentacao", "criatividade", "arte"],
     attributes: {
@@ -96,7 +96,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Fazendeiro",
     type: "profissao",
     emoji: "🧑‍🌾",
-    image: "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/fazendeiro.jpg",
     difficulty: 1,
     tags: ["profissao", "alimentacao", "natureza", "importante"],
     attributes: {
@@ -114,7 +114,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Cientista",
     type: "profissao",
     emoji: "🧑‍🔬",
-    image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/cientista.jpg",
     difficulty: 2,
     tags: ["profissao", "ciencia", "descoberta", "importante"],
     attributes: {
@@ -132,7 +132,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Engenheiro",
     type: "profissao",
     emoji: "🏗️",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/engenheiro.jpg",
     difficulty: 2,
     tags: ["profissao", "construcao", "tecnologia", "importante"],
     attributes: {
@@ -150,7 +150,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Artista",
     type: "profissao",
     emoji: "🎨",
-    image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/artista.jpg",
     difficulty: 1,
     tags: ["profissao", "arte", "criatividade", "cultura"],
     attributes: {
@@ -168,7 +168,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Músico",
     type: "profissao",
     emoji: "🎵",
-    image: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/musico.jpg",
     difficulty: 1,
     tags: ["profissao", "arte", "musica", "cultura"],
     attributes: {
@@ -186,7 +186,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Astronauta",
     type: "profissao",
     emoji: "🧑‍🚀",
-    image: "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/astronauta.jpg",
     difficulty: 2,
     tags: ["profissao", "espaco", "ciencia", "coragem"],
     attributes: {
@@ -204,7 +204,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Enfermeiro",
     type: "profissao",
     emoji: "🏥",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/enfermeiro.jpg",
     difficulty: 1,
     tags: ["profissao", "saude", "cuidado", "importante"],
     attributes: {
@@ -222,7 +222,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Veterinário",
     type: "profissao",
     emoji: "🐾",
-    image: "https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/veterinario.jpg",
     difficulty: 2,
     tags: ["profissao", "saude", "animais", "cuidado"],
     attributes: {
@@ -240,7 +240,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Dentista",
     type: "profissao",
     emoji: "🦷",
-    image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/dentista.jpg",
     difficulty: 1,
     tags: ["profissao", "saude", "dentes", "cuidado"],
     attributes: {
@@ -258,7 +258,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Motorista",
     type: "profissao",
     emoji: "🧑‍✈️",
-    image: "https://images.unsplash.com/photo-1558979158-65a1eaa08691?auto=format&fit=crop&w=300&q=80",
+    image: "/img/database/motorista.jpg",
     difficulty: 1,
     tags: ["profissao", "transporte", "servico", "cotidiano"],
     attributes: {
