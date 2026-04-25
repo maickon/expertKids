@@ -33,6 +33,11 @@ const Generator = {
         return KNOWLEDGE_BASE.entities.filter(e => e.type === type);
     },
 
+    // Verifica se uma string ainda tem placeholders não resolvidos
+    _hasUnresolved: function (str) {
+        return /\{[a-zA-Z0-9_.]+\}/.test(String(str || ''));
+    },
+
     getEntityById: function (id) {
         return KNOWLEDGE_BASE.entities.find(e => e.id === id) || null;
     },
@@ -196,6 +201,14 @@ const Generator = {
         let options   = [correct];
         const ansType = template ? template.answer_type : null;
 
+        // Usa o tipo real da entidade (não required_types[0], que pode ser diferente
+        // quando required_types é array com vários tipos possíveis)
+        const actualType = data?.['entity1']?.type
+            || (Array.isArray(template?.required_types)
+                ? template.required_types[0]
+                : template?.required_types)
+            || null;
+
         // Número → distrações próximas
         if (!isNaN(correct) && correct !== '') {
             const val = parseInt(correct);
@@ -219,41 +232,39 @@ const Generator = {
             const distractors = allTypes.filter(t => t !== correct);
             distractors.sort(() => Math.random() - 0.5);
             options = [correct, ...distractors.slice(0, 3)];
-            return options.sort(() => Math.random() - 0.5);
+            return this._sanitizeOptions(options);
         }
 
         // Label (nome de entidade) → outras entidades do mesmo tipo
         if (ansType === 'label') {
-            const baseType = template.required_types[0];
-            const pool = this.getEntitiesByType(baseType)
+            const pool = this.getEntitiesByType(actualType || template.required_types)
                 .map(e => e.label)
                 .filter(l => l !== correct);
             pool.sort(() => Math.random() - 0.5);
             options = [correct, ...pool.slice(0, 3)];
-            return options.sort(() => Math.random() - 0.5);
+            return this._sanitizeOptions(options);
         }
 
         // Atributo → distrações a partir de entidades do mesmo tipo
         if (ansType === 'attribute') {
-            const baseType = template.required_types[0];
-            const answerKey = template.answer.match(/\{attribute\d+\.(\w+)\}/)?.[1];
-            if (answerKey) {
-                const pool = this.getEntitiesByType(baseType)
+            const answerKey = (template.answer || '').match(/\{attribute\d+\.(\w+)\}/)?.[1];
+            if (answerKey && actualType) {
+                const pool = this.getEntitiesByType(actualType)
                     .map(e => e.attributes?.[answerKey])
-                    .filter(v => v !== undefined && String(v) !== correct);
+                    .filter(v => v !== undefined && v !== null && v !== '' && String(v) !== correct);
                 const unique = [...new Set(pool.map(String))];
                 unique.sort(() => Math.random() - 0.5);
                 options = [correct, ...unique.slice(0, 3)];
             }
             // Se não encontrou distrações suficientes, completa com labels do mesmo tipo
             if (options.length < 4) {
-                const fallback = this.getEntitiesByType(baseType)
+                const fallback = this.getEntitiesByType(actualType || template.required_types)
                     .map(e => e.label)
                     .filter(l => !options.includes(l));
                 fallback.sort(() => Math.random() - 0.5);
                 while (options.length < 4 && fallback.length > 0) options.push(fallback.shift());
             }
-            return [...new Set(options)].sort(() => Math.random() - 0.5).slice(0, 4);
+            return this._sanitizeOptions([...new Set(options)].slice(0, 4));
         }
 
         // Fallback genérico
@@ -262,7 +273,16 @@ const Generator = {
             .filter(l => l !== correct);
         fallback.sort(() => Math.random() - 0.5);
         options = [correct, ...fallback.slice(0, 3)];
-        return [...new Set(options)].sort(() => Math.random() - 0.5);
+        return this._sanitizeOptions([...new Set(options)]);
+    },
+
+    // Remove opções com placeholders não resolvidos ou vazias
+    _sanitizeOptions: function (options) {
+        const clean = options
+            .map(o => String(o || '').trim())
+            .filter(o => o.length > 0 && !this._hasUnresolved(o));
+        // Garante shuffle e no mínimo 1 opção válida
+        return clean.sort(() => Math.random() - 0.5).slice(0, 4);
     },
 
     // ── Exercício de Matemática ───────────────────────────────────────────────
@@ -347,7 +367,9 @@ const Generator = {
 
     // ── Função Principal ──────────────────────────────────────────────────────
 
-    generateExercise: function (skill) {
+    generateExercise: function (skill, _depth) {
+        _depth = _depth || 0;
+        if (_depth > 8) return null; // evita recursão infinita
 
         // Matemática: lógica separada
         if (skill === 'math_basic') return this._generateMath(skill);
@@ -359,28 +381,20 @@ const Generator = {
         const template = this._pickTemplate(skill);
         if (!template) return null;
 
-        // 2. Sorteia as entidades necessárias (weighted, sem repetição entre si)
+        // 2. required_types é o pool de tipos válidos para entity1.
+        //    pickWeightedEntity já aceita array → escolhe de qualquer um dos tipos.
         const selectedData = {};
         const usedIds      = [];
 
-        for (let i = 0; i < template.required_types.length; i++) {
-            const type   = template.required_types[i];
-            const entity = this.pickWeightedEntity(type, usedIds);
-            if (!entity) continue;
-            selectedData[`entity${i + 1}`] = entity;
-            usedIds.push(entity.id);
-        }
-
-        if (!selectedData['entity1']) return null;
+        const entity1 = this.pickWeightedEntity(template.required_types, usedIds);
+        if (!entity1) return null;
+        selectedData['entity1'] = entity1;
+        usedIds.push(entity1.id);
 
         // 3. Verifica anti-repetição (chave template+entidades)
         const key = this._makeKey(template.id, usedIds);
-        // Se a combinação é recente E ainda temos outras opções, tenta mais uma vez
         if (this._isRecent(key) && KNOWLEDGE_BASE.entities.length > 5) {
-            const altEntity = this.pickWeightedEntity(
-                template.required_types[0],
-                [...usedIds, selectedData['entity1'].id]
-            );
+            const altEntity = this.pickWeightedEntity(template.required_types, usedIds);
             if (altEntity) {
                 selectedData['entity1'] = altEntity;
                 usedIds[0] = altEntity.id;
@@ -395,16 +409,45 @@ const Generator = {
         }
 
         // 5. Preenche o template com as entidades sorteadas
-        const filled = this.fillTemplate(template, selectedData);
+        let filled = this.fillTemplate(template, selectedData);
 
-        // 6. Gera opções de resposta inteligentes
-        filled.options = this.generateOptions(filled.answer, template, selectedData);
-        filled.image   = selectedData['entity1'].image || null;
-        filled.emoji   = selectedData['entity1'].emoji || '';
+        // 6. Valida que a resposta foi totalmente resolvida (sem placeholders literais).
+        //    Se a entidade sorteada não tem o atributo necessário, troca por outra.
+        if (this._hasUnresolved(filled.answer) || !filled.answer) {
+            const answerAttr = (template.answer || '').match(/\{attribute1\.(\w+)\}/)?.[1];
+            const candidatePool = this.getEntitiesByType(template.required_types)
+                .filter(e => {
+                    if (e.id === entity1.id) return false;
+                    if (!answerAttr) return true;
+                    const val = e.attributes?.[answerAttr];
+                    return val !== undefined && val !== null && val !== '';
+                });
+
+            let resolved = false;
+            for (let r = 0; r < candidatePool.length && !resolved; r++) {
+                const alt   = candidatePool[r];
+                const testD = { entity1: alt };
+                const test  = this.fillTemplate(template, testD);
+                if (!this._hasUnresolved(test.answer) && test.answer) {
+                    filled = test;
+                    selectedData['entity1'] = alt;
+                    usedIds[0] = alt.id;
+                    resolved = true;
+                }
+            }
+
+            // Ainda sem solução → descarta template e tenta novamente
+            if (!resolved) return this.generateExercise(skill, _depth + 1);
+        }
+
+        // 7. Gera opções de resposta inteligentes
+        filled.options  = this.generateOptions(filled.answer, template, selectedData);
+        filled.image    = selectedData['entity1'].image || null;
+        filled.emoji    = selectedData['entity1'].emoji || '';
         filled.fun_fact = selectedData['entity1'].fun_fact || null;
-        filled.skill   = skill;
+        filled.skill    = skill;
 
-        // 7. Registra uso no histórico
+        // 8. Registra uso no histórico
         this._markUsed(this._makeKey(template.id, usedIds), usedIds);
 
         return filled;

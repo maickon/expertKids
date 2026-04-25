@@ -27,7 +27,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Cachorro",
     type: "animal",
     emoji: "🐶",
-    image: "/img/database/cachoro.jpg",
+    image: "/img/database/cachorro.jpg",
     difficulty: 1,
     tags: ["animal", "mamifero", "domestico", "terrestre"],
     attributes: {
@@ -84,7 +84,7 @@ KNOWLEDGE_BASE.entities.push(
     label: "Cavalo",
     type: "animal",
     emoji: "🐴",
-    image: "/img/database/galinha.jpg",
+    image: "/img/database/cavalo.jpg",
     difficulty: 1,
     tags: ["animal", "mamifero", "domestico", "terrestre", "fazenda"],
     attributes: {
